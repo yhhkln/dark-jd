@@ -13,4 +13,5 @@ class Product < ApplicationRecord
    validates :oil, numericality: {greater_than_or_equal_to: 0, message: "来来来，你告诉我，负油长什么样！我就知道富有。"}
 
   mount_uploader :image, ImageUploader
+  acts_as_list
 end
