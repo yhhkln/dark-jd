@@ -9,6 +9,20 @@
           <a href="/products" style="background-color:#C73234; color:#fff;">Products</a>
         </li>
       </ul>
+<!-- 搜索 -->
+      <div class="nav navbar-nav navbar-left">
+        <%= form_tag search_products_path , :method => :get do %>
+          <div class="input-group" id="search-id" >
+            <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="Please enter the menu information">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+              </div>
+            </div>
+          <% end %>
+        </div>
+<!-- 搜索 -->
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to carts_path do  %>
@@ -353,7 +367,7 @@
       <div id="page-wrap">
         <header id="page-header" class="clearfix">
           <div id="header-container" class="header-style-1 logo-position-left navigation-position-right sticky-logo-position-left sticky-navigation-position-right no-stuck clearfix"  data-responsive="{&quot;css&quot;:{&quot;padding-bottom&quot;:{&quot;phone&quot;:20,&quot;tablet&quot;:30,&quot;widescreen&quot;:0}}}">
-          
+
               <div class="container relative">
                 <div id="logo">
                   <a href="https://www.hireachef.com">
