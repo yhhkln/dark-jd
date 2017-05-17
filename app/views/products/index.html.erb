@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
       <%= link_to product_path(product) do %>
@@ -11,4 +11,113 @@
       <%= product.title %> ￥ <%= product.price %>
     </div>
   <% end %>
-</div>
+</div> -->
+
+
+
+  <main role="main" class="c-main-container">
+   <section class="container c-main-content">
+    <h3>Search Recipes</h3>
+    <div class="c-search c-search--recipes-landing">
+     <form action="https://www.jamesbeard.org/recipes/search" class="c-search__form  input-group ">
+      <input type="text" name="keyword" class="c-search__input  form-control " placeholder="Search by keyword" />
+      <span class="input-group-btn"> <button class="btn c-search__button-addon" type="submit">Search</button> </span>
+     </form>
+    </div>
+    <div class="m-media-list c-recipe-list">
+     <a href="https://www.jamesbeard.org/recipes/watermelon-mojito" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/5/8/watermelon mojitos web.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/5/8/watermelon mojitos web.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Watermelon Mojito</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/spaghetti-with-white-miso-egg-yolks-bay-scallops-and-black-truffles" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2016/8/29/spaghetti with miso and scallops_blake pope new site-edit.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2016/8/29/spaghetti with miso and scallops_blake pope new site-edit.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Spaghetti with White Miso, Egg Yolks, Bay Scallops, and Black Truffles</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/louisiana-crabcakes-benedict" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/3/28/louisana crab cake web.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/3/28/louisana crab cake web.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Louisiana Crabcakes Benedict</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/victorias-ramp-stuffed-roast-chicken" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/archive/jbf-2013/recipes/jordan-roast-chicken-istock.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/archive/jbf-2013/recipes/jordan-roast-chicken-istock.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Victoria's Ramp-Stuffed Roast Chicken</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/bread-salad-with-asparagus-pickled-rhubarb-and-flat-leaf-parsley" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2016/9/2/Taste &amp; Technique_Bread Salad with Asparagus resized.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2016/9/2/Taste &amp; Technique_Bread Salad with Asparagus resized.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Bread Salad with Asparagus, Pickled Rhubarb, and Flat-Leaf Parsley</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/magnificent-mile" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/5/5/Vermilion_18 web.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/5/5/Vermilion_18 web.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Magnificent Mile</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/alkalizing-green-soup" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/4/12/heidiswanson_DSC0232-Edit-2 web.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/4/12/heidiswanson_DSC0232-Edit-2 web.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Alkalizing Green Soup</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/rustic-meatloaf-with-leeks-and-mountain-cheese" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/3/30/66_LeekCheeseMeatloaf photo Meike Peters web.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/3/30/66_LeekCheeseMeatloaf photo Meike Peters web.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Rustic Meatloaf with Leeks and Mountain Cheese</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/smoked-salmon-pizzas" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/3/30/132_Gart_9780307464897_art_r1 web.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/3/30/132_Gart_9780307464897_art_r1 web.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Smoked Salmon Pizzas</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/spiced-sangria" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/5/5/Vermilion_8 copy.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/5/5/Vermilion_8 copy.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Spiced Sangria</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/kimchi-grilled-cheese-sandwiches" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/3/6/Kimchi Grilled Cheese w Napkin photo by Yewande Komolafe web.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/3/6/Kimchi Grilled Cheese w Napkin photo by Yewande Komolafe web.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Kimchi Grilled Cheese Sandwiches</p>
+      </div> </a>
+     <a href="https://www.jamesbeard.org/recipes/shrimp-fried-rice" class="m-media">
+      <div class="m-media__img-holder" style="background-image: url('https://jbf-media.s3.amazonaws.com/production/recipe/2017/4/18/Fried Rice.jpg')">
+       <img class="m-media__img" src="https://jbf-media.s3.amazonaws.com/production/recipe/2017/4/18/Fried Rice.jpg" alt="" />
+      </div>
+      <div class="m-media__content">
+       <p class="m-media__text-primary">Shrimp Fried Rice</p>
+      </div> </a>
+    </div>
+    <div class="c-btn-holder">
+     <a href="https://www.jamesbeard.org/api/v1/recipes/load_more?page=1" class="a-btn a-btn--large js-load-more-recipes">Load More</a>
+     <a href="#top" class="a-btn--btt js-slide-page"> <i class="a-icon-chevron">
+       <svg width="50" height="50" viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" stroke-linejoin="round">
+        <path d="M49.9 50l-50 0 0-50 50 0 0 50ZM3.4 46.6l43 0 0-43-43 0 0 43Z"></path>
+        <path class="icon" d="M34.7 32.3l-9.8-13.1-9.7 12.9-2.8-2 12.5-16.7 12.6 16.9-2.8 2Z"></path>
+       </svg> </i> </a>
+    </div>
+   </section>
+   <div class="push"></div>
+  </main>
