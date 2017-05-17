@@ -83,3 +83,258 @@
     </div>
   </div>
 </div>
+
+
+
+<div class="main">
+   <!-- ngIf: !!pageLoading -->
+   <!-- ngView:  -->
+   <div ng-view="" autoscroll="true" ng-show="!pageLoading" class="ng-scope">
+      <div class="store-content page-cart ng-scope">
+         <div class="gray-box">
+            <div class="title">
+               <h2>购物清单</h2>
+            </div>
+            <div class="box-inner ui-cart">
+               <!-- ngIf: cartOrder.isEmpty -->
+               <!-- ngIf: !cartOrder.isEmpty -->
+               <div ng-if="!cartOrder.isEmpty" class="ng-scope">
+                  <div class="cart-table-title">
+                     <span class="name">商品信息</span>
+                     <span class="operation">操作</span>
+                     <span class="subtotal">小计</span>
+                     <span class="num">数量</span>
+                     <span class="price">单价</span>
+                  </div>
+                  <div class="cart-table">
+                     <!-- ngRepeat: ($index, group) in cartOrder.goods track by $index -->
+                     <div class="cart-group ng-scope" ng-repeat="($index, group) in cartOrder.goods track by $index" ng-class="{'divide': group.list.length &gt; 1 &amp;&amp; !group.promotions, 'promotions': !!group.promotions}">
+                        <!-- ngIf: !!group.promotions -->
+                        <!-- ngRepeat: ($index, cart) in group.list track by $index -->
+                        <!-- ngInclude:  -->
+                        <div class="cart-top-items ng-scope" ng-repeat="($index, cart) in group.list track by $index" ng-include="" src="'tempCartPageListItem'">
+                           <div class="cart-items clearfix js-cart-items ng-scope" ng-class="{'cart-gift': cart.isGift == true, 'package-goods': cart.isPackageGoods == true, 'cart-subdiscount-item': cart.isGift == true &amp;&amp; cart.isStock, 'cart-subdiscount-disabled': cart.isGift &amp;&amp; !cart.isStock, 'canot-buy': (!cart.isGift &amp;&amp; ((cart.isSold &amp;&amp; !cart.isStock) || !cart.isSold)) || (cart.isGift &amp;&amp; cart.maxGiftNum == 0)}" data-id="100022501">
+                              <!-- 商品勾选组件 -->
+                              <!-- ngIf: cart.isSold && cart.isStock && !cart.isWarranty && !cart.isGift -->
+                              <div class="items-choose ng-scope" ng-if="cart.isSold &amp;&amp; cart.isStock &amp;&amp; !cart.isWarranty &amp;&amp; !cart.isGift">
+                                 <span ng-click="toggleCheck($event)" class="blue-checkbox-new checkbox-on" ng-class="{'checkbox-on': !!checked, 'checkbox-disable': disableddd}" data-name="100022501 " data-status="true" ui-checkbox="" checked="checked" options="checkboxConfig" goods="cart"><a></a></span>
+                              </div>
+                              <!-- end ngIf: cart.isSold && cart.isStock && !cart.isWarranty && !cart.isGift -->
+                              <!-- 商品图片 -->
+                              <div class="items-thumb">
+                                 <img ng-src="http://image.smartisanos.cn/resource/5eba0b0d282f24b5d09dd9585bee4c44.png?x-oss-process=image/resize,w_80/quality,Q_100/format,webp" alt="Micro-USB 至 Type-C 转接头 &times; 2" src="http://image.smartisanos.cn/resource/5eba0b0d282f24b5d09dd9585bee4c44.png?x-oss-process=image/resize,w_80/quality,Q_100/format,webp" />
+                                 <!-- ngIf: cart.isSold && !cart.isStock && !cart.isGift && !cart.isPackageGoods -->
+                                 <!-- ngIf: !cart.isSold && !cart.isGift && !cart.isPackageGoods -->
+                                 <!-- ngIf: cart.isGift && cart.maxGiftNum == 0 -->
+                                 <!-- ngIf: !cart.link -->
+                                 <!-- ngIf: cart.link -->
+                                 <a ng-if="cart.link" href="#/item/100022501" title="Micro-USB 至 Type-C 转接头 &times; 2" target="_blank" class="ng-scope"></a>
+                                 <!-- end ngIf: cart.link -->
+                              </div>
+                              <!-- 普通商品属性信息 -->
+                              <!-- ngIf: !cart.isGift -->
+                              <div class="name hide-row ng-scope" ng-if="!cart.isGift">
+                                 <div class="name-table" ng-class="{'package': !!cart.isPackage}">
+                                    <!-- ngIf: cart.link -->
+                                    <a ng-if="cart.link" href="#/item/100022501" title="Micro-USB 至 Type-C 转接头 &times; 2" target="_blank" class="ng-binding ng-scope">
+                                       <!-- ngIf: !!cart.isPackage -->Micro-USB 至 Type-C 转接头 &times; 2
+                                    </a>
+                                    <!-- end ngIf: cart.link -->
+                                    <!-- ngIf: !cart.isWarranty && !cart.isDoodle && !cart.isPackage -->
+                                    <ul class="attribute ng-scope" ng-if="!cart.isWarranty &amp;&amp; !cart.isDoodle &amp;&amp; !cart.isPackage">
+                                       <!-- ngRepeat: attr in cart.attrs -->
+                                       <li ng-repeat="attr in cart.attrs" class="ng-binding ng-scope">白色</li>
+                                       <!-- end ngRepeat: attr in cart.attrs -->
+                                    </ul>
+                                    <!-- end ngIf: !cart.isWarranty && !cart.isDoodle && !cart.isPackage -->
+                                    <!-- ngIf: !cart.link -->
+                                 </div>
+                              </div>
+                              <!-- end ngIf: !cart.isGift -->
+                              <!-- 赠品属性信息 -->
+                              <!-- ngIf: cart.isGift -->
+                              <!-- 删除按钮 -->
+                              <div class="operation">
+                                 <!-- ngIf: !cart.isGift && !cart.isPackageGoods -->
+                                 <a ng-if="!cart.isGift &amp;&amp; !cart.isPackageGoods" class="items-delete-btn ng-scope" ng-click="removeCart(cart.sku, cart.attachId, cart.isMobile)"></a>
+                                 <!-- end ngIf: !cart.isGift && !cart.isPackageGoods -->
+                              </div>
+                              <!-- 商品价格及数量 -->
+                              <!-- ngIf: !cart.isGift -->
+                              <div ng-if="!cart.isGift" class="ng-scope">
+                                 <!-- ngIf: !cart.isPackageGoods -->
+                                 <div class="subtotal ng-binding ng-scope" ng-if="!cart.isPackageGoods">
+                                    &yen; 29.00
+                                 </div>
+                                 <!-- end ngIf: !cart.isPackageGoods -->
+                                 <div class="item-cols-num">
+                                    <!-- ngIf: !cart.isStock || !cart.isSold || cart.isWarranty || cart.isPackageGoods -->
+                                    <!-- ngIf: cart.isStock && cart.isSold && !cart.isWarranty && !cart.isPackageGoods -->
+                                    <div class="select js-select-quantity" data-id="100022501" data-max="6 " ng-if="cart.isStock &amp;&amp; cart.isSold &amp;&amp; !cart.isWarranty &amp;&amp; !cart.isPackageGoods" options="cartQuantityConfig" sku="100022501" value="cart.num">
+                                       <span class="down down-disabled" ng-click="down($event)" ng-class="{'down-disabled': value == 1 &amp;&amp; !options.canDelete}">-</span>
+                                       <span class="num">
+                                          <input type="text" ng-model="value" class="ng-pristine ng-valid" />
+                                          <ul>
+                                             <!-- ngRepeat: i in arr -->
+                                             <li ng-repeat="i in arr" ng-bind="i" class="ng-binding ng-scope">1</li>
+                                             <!-- end ngRepeat: i in arr -->
+                                             <li ng-repeat="i in arr" ng-bind="i" class="ng-binding ng-scope">2</li>
+                                             <!-- end ngRepeat: i in arr -->
+                                          </ul>
+                                       </span>
+                                       <span class="up" ng-click="up($event)">+</span>
+                                    </div>
+                                    <!-- end ngIf: cart.isStock && cart.isSold && !cart.isWarranty && !cart.isPackageGoods -->
+                                    <!-- ngIf: !!cart.stockNum && cart.isStock && cart.isSold && !cart.isPackageGoods -->
+                                 </div>
+                                 <!-- ngIf: !cart.isPackageGoods -->
+                                 <div class="price ng-binding ng-scope" ng-if="!cart.isPackageGoods">
+                                    &yen; 29.00
+                                 </div>
+                                 <!-- end ngIf: !cart.isPackageGoods -->
+                              </div>
+                              <!-- end ngIf: !cart.isGift -->
+                              <!-- <div ng-if="!cart.isSell">
+                                 <div class="subtotal">--</div>
+                                 <div class="item-cols-num">--</div>
+                                 <div class="price">--</div>
+                                 </div> -->
+                           </div>
+                           <!-- 保修服务 -->
+                           <!-- ngIf: cart.isMobile && cart.isSold && cart.isStock -->
+                           <!-- 套餐 复用保修服务样式-->
+                           <!-- ngIf: cart.isPackage && cart.isSold && cart.isStock -->
+                        </div>
+                        <!-- end ngRepeat: ($index, cart) in group.list track by $index -->
+                        <!-- ngRepeat: ($index, cart) in group.promotions.gifts track by $index -->
+                     </div>
+                     <!-- end ngRepeat: ($index, group) in cartOrder.goods track by $index -->
+                  </div>
+               </div>
+               <!-- end ngIf: !cartOrder.isEmpty -->
+            </div>
+            <div class="cart-bottom-bg fix-bottom" ng-class="{'hide': cartOrder.isEmpty }">
+               <div class="fix-bottom-inner">
+                  <div class="cart-bar-operation">
+                     <div>
+                        <div class="choose-all js-choose-all" ng-class="{'choose-all-disabled': cartOrder.isNothing}">
+                           <span ng-click="toggleCheck($event)" class="blue-checkbox-new checkbox-on" ng-class="{'checkbox-on': !!checked, 'checkbox-disable': disableddd}" data-name="all " data-status="true" checked="checked" disableddd="cartOrder.isNothing" options="checkboxConfigAll"><a></a></span>全选
+                        </div>
+                        <!-- ngIf: !cartOrder.isNothing -->
+                        <div ng-if="!cartOrder.isNothing" ng-class="{'delete-choose-goods-disabled': !cartOrder.hasChecked}" class="delete-choose-goods ng-scope" ng-click="removeChooseCart(cartOrder.hasChecked)">
+                           删除选中的商品
+                        </div>
+                        <!-- end ngIf: !cartOrder.isNothing -->
+                        <!-- ngIf: cartOrder.isInvalid -->
+                     </div>
+                  </div>
+                  <div class="shipping">
+                     <div class="shipping-box">
+                        <div class="shipping-total shipping-num">
+                           <h4 ng-class="{'highlight': cartOrder.checkedCount &gt; 0}" class="highlight">已选择 <i ng-bind="cartOrder.checkedCount" class="ng-binding">1</i> 件商品</h4>
+                           <h5>共计 <i ng-bind="cartOrder.count" class="ng-binding">1</i> 件商品</h5>
+                        </div>
+                        <div class="shipping-total shipping-price">
+                           <h4 ng-class="{'highlight': cartOrder.totalPrice &gt; 0}" class="highlight">应付总额：<span>￥</span><i ng-bind="cartOrder.totalPrice" class="ng-binding">29</i></h4>
+                           <h5 class="shipping-tips">应付总额不含运费</h5>
+                        </div>
+                     </div>
+                     <span ng-click="createOrder(cartOrder.hasChecked)" class="jianguo-blue-main-btn big-main-btn js-checkout" ng-class="{'disabled-btn': !cartOrder.hasChecked}"><a>现在结算</a></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script id="tempCartPageListItem" type="text/ng-template" class="ng-scope"><div class="cart-items clearfix js-cart-items" ng-class="{'cart-gift': cart.isGift == true, 'package-goods': cart.isPackageGoods == true, 'cart-subdiscount-item': cart.isGift == true && cart.isStock, 'cart-subdiscount-disabled': cart.isGift && !cart.isStock, 'canot-buy': (!cart.isGift && ((cart.isSold && !cart.isStock) || !cart.isSold)) || (cart.isGift && cart.maxGiftNum == 0)}" data-id="{{cart.sku}}">
+         <!-- 商品勾选组件 -->
+         <div class="items-choose" ng-if="cart.isSold && cart.isStock && !cart.isWarranty && !cart.isGift">
+             <div ui-checkbox checked="cart.isChecked" options="checkboxConfig" name="{{cart.sku}}" goods="cart"></div>
+         </div>
+         <!-- 商品图片 -->
+         <div class="items-thumb">
+             <img ng-src="{{cart.image | smartImg:80: cart.isOSS: 'w_80,Q_100'}}" alt="{{cart.title}}" />
+             <span ng-if="cart.isSold && !cart.isStock && !cart.isGift && !cart.isPackageGoods">暂时无货</span>
+             <span ng-if="!cart.isSold && !cart.isGift && !cart.isPackageGoods">商品下架</span>
+             <span ng-if="cart.isGift && cart.maxGiftNum == 0">已赠完</span>
+             <i ng-if="!cart.link"></i>
+             <a ng-if="cart.link" href="{{cart.link}}" title="{{cart.title}}" target="_blank"></a>
+         </div>
+         <!-- 普通商品属性信息 -->
+         <div class="name hide-row" ng-if="!cart.isGift">
+             <div class="name-table" ng-class="{'package': !!cart.isPackage}">
+                 <a ng-if="cart.link" href="{{cart.link}}" title="{{cart.title}}" target="_blank"><span ng-if="!!cart.isPackage">【套餐】</span>{{cart.title}}</a>
+                 <ul class="attribute" ng-if="!cart.isWarranty && !cart.isDoodle && !cart.isPackage">
+                     <li ng-repeat="attr in cart.attrs">{{attr.value}}</li>
+                 </ul>
+                 <span ng-if="!cart.link">{{cart.title}}</span>
+             </div>
+         </div>
+         <!-- 赠品属性信息 -->
+         <div class="name hide-row" ng-if="cart.isGift">
+             <div class="name-table">
+                 <a ng-if="cart.link" href="{{cart.link}}" title="{{cart.title}}" target="_blank"><span>【赠品】</span>{{cart.title}}（价值 ￥{{cart.price}}）</a>
+                 <p ng-if="cart.link">
+                     <span>{{cart.colorName}}</span>
+                     <label ng-if="!!cart.totalNum">
+                         <span class="smartisan-icon times"></span> <span>{{cart.totalNum}}</span>
+                     </label>
+                 </p>
+                 <span ng-if="!cart.link">{{cart.title}}</span>
+             </div>
+         </div>
+         <!-- 删除按钮 -->
+         <div class="operation">
+             <a ng-if="!cart.isGift && !cart.isPackageGoods" class="items-delete-btn" ng-click="removeCart(cart.sku, cart.attachId, cart.isMobile)"></a>
+         </div>
+         <!-- 商品价格及数量 -->
+         <div ng-if="!cart.isGift">
+             <div class="subtotal" ng-if="!cart.isPackageGoods">{{cart.totalPrice | rmb:true}}</div>
+             <div class="item-cols-num">
+                 <div ng-if="!cart.isStock || !cart.isSold || cart.isWarranty || cart.isPackageGoods">{{cart.num}}</div>
+                 <cart-quantity ng-if="cart.isStock && cart.isSold && !cart.isWarranty && !cart.isPackageGoods" options="cartQuantityConfig" sku="{{cart.sku}}" max="{{cart.maxNum}}" value="cart.num"></cart-quantity>
+                 <div class="prompt-stock" ng-if="!!cart.stockNum && cart.isStock && cart.isSold && !cart.isPackageGoods">仅剩 <span>{{cart.stockNum}}</span> 件</div>
+             </div>
+
+             <div class="price" ng-if="!cart.isPackageGoods">{{cart.price | rmb:true}}</div>
+         </div>
+         <!-- <div ng-if="!cart.isSell">
+             <div class="subtotal">--</div>
+             <div class="item-cols-num">--</div>
+             <div class="price">--</div>
+         </div> -->
+         </div>
+
+         <!-- 保修服务 -->
+         <div ng-if="cart.isMobile && cart.isSold && cart.isStock" class="warranty-group js-warranty-group">
+         <div ng-repeat="($index, cart) in cart.warranty track by $index" class="warranty-divide" ng-if="cart.isExist">
+             <div ng-include src="'tempCartPageListItem'"></div>
+         </div>
+         <div class="warranty-buy" ng-if="!cart.isDelay || !cart.isAccident" ng-class="{'no-warranty': (!cart.isDelay && !cart.isAccident)}" ng-click="addWarranty(cart.sku, cart.num, cart.isDelay, cart.isAccident)">
+             <span class="warranty-buy-cover"></span>
+             <span ng-if="!cart.isDelay && !cart.isAccident"><i ng-if="cart.title != '坚果手机'">购买 {{cart.title}} 保修服务，</i><i ng-if="cart.title == '坚果手机'">购买{{cart.title}}保修服务，</i></span>
+             <span ng-if="!cart.isDelay && cart.isAccident"><i ng-if="cart.title != '坚果手机'">购买 {{cart.title}} 延长保修服务，</i><i ng-if="cart.title == '坚果手机'">购买{{cart.title}}延长保修服务，</i></span>
+             <span ng-if="cart.isDelay && !cart.isAccident"><i ng-if="cart.title != '坚果手机'">购买 {{cart.title}} 意外保修服务，</i><i ng-if="cart.title == '坚果手机'">购买{{cart.title}}意外保修服务，</i></span>
+             折后每月仅需 {{(cart.warrantyPrice/12) | numberFormat:'ceil':-1}} 元。
+             <!--<a href="">-->
+                 <!--进一步了解详情-->
+                 <!--<span class="smartisan-icon gt"></span>-->
+             <!--</a>-->
+         </div>
+
+         <!-- <div class="warranty-buy" ng-click="addWarranty(cart.sku)" ng-if="!group.warrantyToBottom && !cart.isAccident && !!cart.isDelay">
+             购买{{cart.accident.category}}意外保修服务 ￥ {{cart.accident.price}}/年，“免费一次主机更换 ? ”“免费两次维修 ? ”
+         </div>
+         <div class="warranty-buy" ng-click="addWarranty(cart.sku)" ng-if="!group.warrantyToBottom && !cart.isDelay && !!cart.isAccident">
+             购买{{cart.delay.category}}延长保修服务 ￥ {{cart.delay.price}}/年，正常“三包” 1 年保修期结束后，将额外多获得 1 年保修服务。
+         </div> -->
+         </div>
+
+         <!-- 套餐 复用保修服务样式-->
+         <div class="warranty-group" ng-if="cart.isPackage && cart.isSold && cart.isStock">
+         <div ng-repeat="($index, cart) in cart.packageGoods track by $index" class="warranty-divide">
+             <div ng-include src="'tempCartPageListItem'"></div>
+         </div>
+         </div>
+      </script>
+   </div>
+</div>
