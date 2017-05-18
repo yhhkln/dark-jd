@@ -1,16 +1,17 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">JDStore </a>
-    </div>
+
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color:#C73234;">
-      <ul class="nav navbar-nav">
+      <!-- <ul class="nav navbar-nav">
         <li class="active product-1">
           <a href="/products" style="background-color:#C73234; color:#fff;">Products</a>
         </li>
       </ul>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">JDStore </a>
+      </div> -->
 <!-- 搜索 -->
-      <div class="nav navbar-nav navbar-left">
+      <div class="nav navbar-nav navbar-right">
         <%= form_tag search_products_path , :method => :get do %>
           <div class="input-group" id="search-id" >
             <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="Please enter the menu information">
@@ -26,12 +27,12 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to carts_path do  %>
-            购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+            Order Now <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
           <% end %>
         </li>
         <% if !current_user %>
-          <li><%= link_to("注册", new_user_registration_path) %> </li>
-          <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
+          <li><%= link_to("Sign up", new_user_registration_path) %> </li>
+          <li><%= link_to(content_tag(:i, ' Log in', class: 'fa fa-sign-in'), new_user_session_path) %></li>
         <% else %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -361,62 +362,47 @@
 
 
 <!-- **LOGO分栏（Navbar与大图之间）**--><!-- **LOGO分栏（Navbar与大图之间）**-->
-<body class="home page-template-default page page-id-6 run" itemscope itemtype="http://schema.org/WebPage">
-  <div id="side-panel-pusher">
-    <div id="main-container">
-      <div id="page-wrap">
-        <header id="page-header" class="clearfix">
-          <div id="header-container" class="header-style-1 logo-position-left navigation-position-right sticky-logo-position-left sticky-navigation-position-right no-stuck clearfix"  data-responsive="{&quot;css&quot;:{&quot;padding-bottom&quot;:{&quot;phone&quot;:20,&quot;tablet&quot;:30,&quot;widescreen&quot;:0}}}">
-
-              <div class="container relative">
-                <div id="logo">
-                  <a href="https://www.hireachef.com">
-                    <img  id="logo-desktop" class="visible-desktop hide-on-stuck " src="https://www.hireachef.com/wp-content/uploads/2014/07/logo.png" data-at2x="https://www.hireachef.com/wp-content/uploads/2014/07/logo.png" alt="Hire A Chef" style="margin-top: 4px;  margin-bottom: 14px; margin-left:-200px;"/>
-                   </a>
-                </div><!-- /#logo -->
-                <nav id="navigation" class="without-navigation-holder">
-
-                	<ul id="header-navigation" class="sf-menu clearfix unstyled-all">
-                    <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item level-0 top-level-item to-right">
-                      <a href="/">Home</a>
-                    </li>
-                    <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page level-0 top-level-item to-right">
-                      <a href="products">About Us</a>
-                    </li>
-                    <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children level-0 top-level-item has-child fallout link-disabled to-right">
-                      <a>Chefs<i class="ui--caret fontawesome-angle-down px18"></i></a>
-                      <ul class="sub-menu">
-                      	<li id="menu-item-187" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
-                          <a href="https://www.hireachef.com/search/">Search For A Chef</a>
-                        </li>
-                      	<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
-                          <a href="https://www.hireachef.com/chef-login/">Chef Login</a>
-                        </li>
-                      	<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
-                          <a href="https://www.hireachef.com/get-a-listing/">Get A Listing</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children level-0 top-level-item has-child fallout link-disabled to-right">
-                      <a>Help<i class="ui--caret fontawesome-angle-down px18"></i></a>
-                      <ul class="sub-menu">
-                      	<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
-                          <a href="https://www.hireachef.com/why-a-personal-chef/">What Is A Personal Chef Service?</a>
-                        </li>
-                      	<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
-                          <a href="https://www.hireachef.com/frequently-asked-questions/">FAQ&#8217;s</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li id="menu-item-475" class="menu-item menu-item-type-custom menu-item-object-custom level-0 top-level-item to-right">
-                      <a href="http://info.hireachef.com/blog">Blog</a>
-                    </li>
-                    <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page level-0 top-level-item to-right">
-                      <a href="https://www.hireachef.com/contact-us/">Contact Us</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-          </header>
-<!-- **LOGO分栏（Navbar与大图之间）**--><!-- **LOGO分栏（Navbar与大图之间）**-->
+    <div class="container-fluid nav-to-nav-1">
+      <div class="col-md-4">
+        <img src="http://ww4.sinaimg.cn/large/006tNc79gy1ffplilkzfjj30ea04i0t3.jpg">
+      </div><!-- /#logo -->
+    	<ul id="header-navigation" class="sf-menu clearfix unstyled-all" style="margin-top:45px; padding-right:250px;">
+        <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item level-0 top-level-item to-right">
+          <a href="/">Home</a>
+        </li>
+        <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page level-0 top-level-item to-right">
+          <a href="products">About Us</a>
+        </li>
+        <li id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children level-0 top-level-item has-child fallout link-disabled to-right">
+          <a>Chefs<i class="ui--caret fontawesome-angle-down px18"></i></a>
+          <ul class="sub-menu">
+          	<li id="menu-item-187" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
+              <a href="https://www.hireachef.com/search/">Search For A Chef</a>
+            </li>
+          	<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
+              <a href="https://www.hireachef.com/chef-login/">Chef Login</a>
+            </li>
+          	<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
+              <a href="https://www.hireachef.com/get-a-listing/">Get A Listing</a>
+            </li>
+          </ul>
+        </li>
+        <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children level-0 top-level-item has-child fallout link-disabled to-right">
+          <a>Help<i class="ui--caret fontawesome-angle-down px18"></i></a>
+          <ul class="sub-menu">
+          	<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
+              <a href="https://www.hireachef.com/why-a-personal-chef/">What Is A Personal Chef Service?</a>
+            </li>
+          	<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page level-1 sub-level-item to-right">
+              <a href="https://www.hireachef.com/frequently-asked-questions/">FAQ&#8217;s</a>
+            </li>
+          </ul>
+        </li>
+        <li id="menu-item-475" class="menu-item menu-item-type-custom menu-item-object-custom level-0 top-level-item to-right">
+          <a href="http://info.hireachef.com/blog">Blog</a>
+        </li>
+        <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page level-0 top-level-item to-right">
+          <a href="https://www.hireachef.com/contact-us/">Contact Us</a>
+        </li>
+      </ul>
+    </div>
