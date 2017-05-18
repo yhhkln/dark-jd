@@ -18,11 +18,32 @@
 @import "bootstrap";
 @import "font-awesome";
 
+
+//=============== Common_Navbar ===============//
 .navbar-default .navbar-nav > li > a {
     color: #fff;
 }
+.navbar .container-fluid {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.nav-to-nav-1 {
+  margin-top: -20px;
+}
+.nav-to-nav-1 img {
+    width: auto\9;
+    height: auto;
+    max-width: 80%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    margin-left: 250px;
+}
+
+
+//=============== Product_Search ===============//
 .input-group {
   width:276px;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  margin-top: 12px;
+  padding-bottom: 0px;
 }
