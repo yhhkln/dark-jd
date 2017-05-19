@@ -192,7 +192,10 @@ body {
 }
 
 .c-main-content {
-  padding-bottom: 2em
+  padding-bottom: 2em;
+  margin-left: 20%!important;
+  margin-right: 20%!important;
+
 }
 
 .a-btn--btt {
@@ -2888,4 +2891,11 @@ html:not([data-focus-method=pointer]) .VoteButton:focus {
   right: 16px;
   opacity: 0;
   transition: opacity .3s
+}
+.title-weight
+{
+  font-weight: 700;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  text-align: center;
 }
