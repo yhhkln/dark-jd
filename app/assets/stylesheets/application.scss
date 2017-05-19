@@ -18,36 +18,42 @@
 @import "bootstrap";
 @import "font-awesome";
 
+//=============== Product_Search ===============//
+.input-group {
+  width:200px;
+  margin-top: 5px;
+  padding-bottom: 0px;
+}
+.color-1 {
+  background-color: red;
+}
 
 //=============== Common_Navbar ===============//
-.navbar-default .navbar-nav > li > a {
-    color: #fff;
+.navbar-color-1 {
+   border-color:#C73234;
+   border-radius:0px;
+   border: 20px;
+   background-color: #fff;
 }
-.navbar .container-fluid {
+.navbar-default .navbar-nav > li > a {//小导航字体
+  color: #fff;
+  margin-top: -5px;
+}
+.navbar .container-fluid {//小导航满屏
   margin-left: -20px;
   margin-right: -20px;
 }
-.nav-to-nav-1 {
+.nav-to-nav-1 {//大导航位置
   margin-top: -20px;
 }
-.nav-to-nav-1 img {
-    width: auto\9;
-    height: auto;
-    max-width: 80%;
-    vertical-align: middle;
-    border: 0;
-    -ms-interpolation-mode: bicubic;
-    margin-left: 250px;
+.nav-to-nav-1 .col-md-6 img {
+  width: 50%;
+  margin-left: 20%;
 }
-
-
-//=============== Product_Search ===============//
-.input-group {
-  width:276px;
-  margin-top: 12px;
-  padding-bottom: 0px;
+.nav-button-1 {
+  padding-right: 20%;
+  padding-top: 4%;
 }
-
 
 //=============== Command_Footer ===============//
 .font-OpenSans-14 {
