@@ -63,5 +63,7 @@ end
     description:"这只是底料，请去购物车DIY！",
     quantity:rand(6..10),
     price:rand(50..100)*10,
-    image: open(f_images[i]))
+    image: open(f_images[i])
+    )
   end
+puts "16份食物已经煮好了，就是不给你吃."
