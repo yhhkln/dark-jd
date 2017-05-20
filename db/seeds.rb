@@ -13,21 +13,27 @@ end
 
 
 # Initialize Product
-Product.create!(title: "QC-35",
-  description: "耳机",
-  price: 2800,
-  quantity: 5,
-  image: open("https://images-cn.ssl-images-amazon.com/images/I/41bVSMLUllL._AC_UL320_SR320,320_.jpg")
-  )
-Product.create!(title: "Iphone7",
-  description: "手机",
-  price: 5000,
-  quantity: 5,
-  image: open("https://images-cn.ssl-images-amazon.com/images/I/51q3gdJGenL._SL800_.jpg")
-  )
-Product.create!(title: "Cherry Keyboard",
-  description: "G80-3000键盘",
-  price: 2800,
-  quantity: 5,
-  image: open("https://images-cn.ssl-images-amazon.com/images/I/41LN-bXtA7L._AC_UL320_SR320,320_.jpg")
-  )
+
+
+
+
+
+
+  f_title = ["bouquet1","bouquet2","bouquet3","bouquet4","bouquet5","bouquet6"]
+  f_images = [
+    "http://satohana.com/images/2017/03/DSC_05161.jpg",
+    "http://satohana.com/images/2017/03/DSC_0196-001.jpg",
+    "http://satohana.com/images/2017/03/DSC_02951.jpg",
+    "http://satohana.com/images/2017/03/DSC_05861.jpg",
+    "http://satohana.com/images/2016/12/DSC_0177-462x5251.jpg",
+    "http://satohana.com/images/2014/07/DSC_62911.jpg"
+  ]
+
+  for i in 0..5 do
+    Product.create!(
+    title: f_title[i],
+    description:"flower",
+    quantity:100,
+    price:rand(10..50),
+    image: open(f_images[i]))
+  end
