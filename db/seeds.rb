@@ -61,7 +61,7 @@ end
     Product.create!(
     title: f_title[i],
     description:"这只是底料，请去购物车DIY！",
-    quantity:10,
+    quantity:rand(6..10),
     price:rand(50..100)*10,
-    photo[0]:open(f_images[i]))
+    image: open(f_images[i]))
   end
