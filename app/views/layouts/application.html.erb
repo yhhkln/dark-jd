@@ -11,9 +11,13 @@
     <body>
 
         <div class="container-fluid" style="margin-left:-20px; margin-right:-20px;">
+          <div class="navbar-fixed-top">
             <%= render "common/navbar" %>
+          </div>
+          <div style="margin-top:170px;">
             <%= render "common/flashes" %>
             <%= yield %>
+          </div>
         </div>
 
         <%= render "common/footer" %>
