@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  has_many :photos
+  accepts_nested_attributes_for :photos
+
    validates :salt, presence: true
    validates :sugar, presence: true
    validates :sauces, presence: true
