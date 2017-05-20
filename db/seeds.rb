@@ -19,21 +19,49 @@ end
 
 
 
-  f_title = ["bouquet1","bouquet2","bouquet3","bouquet4","bouquet5","bouquet6"]
-  f_images = [
-    "http://satohana.com/images/2017/03/DSC_05161.jpg",
-    "http://satohana.com/images/2017/03/DSC_0196-001.jpg",
-    "http://satohana.com/images/2017/03/DSC_02951.jpg",
-    "http://satohana.com/images/2017/03/DSC_05861.jpg",
-    "http://satohana.com/images/2016/12/DSC_0177-462x5251.jpg",
-    "http://satohana.com/images/2014/07/DSC_62911.jpg"
+  f_title = [
+    "北京烤鸭",
+    "大闸蟹",
+    "东坡肉",
+    "剁椒鱼头",
+    "法式鸡公煲",
+    "宫保鸡丁",
+    "锅包肉",
+    "过桥米线",
+    "红烧肉",
+    "煎饼果子",
+    "麻辣香锅",
+    "墨西哥肉卷",
+    "三明治",
+    "三文鱼扒 ",
+    "水煮鱼",
+    "小笼包"
   ]
 
-  for i in 0..5 do
+  f_images = [
+    "http://ww4.sinaimg.cn/large/006tNbRwgy1ffrq4hl3blj30rs0jqdjg.jpg",
+    "http://ww2.sinaimg.cn/large/006tNbRwgy1ffrqa6g8lbj30i80r540z.jpg",
+    "http://ww4.sinaimg.cn/large/006tNbRwgy1ffrqaet2crj308c0693yt.jpg",
+    "http://ww3.sinaimg.cn/large/006tNbRwgy1ffrqalyuc6j30dw09bgm7.jpg",
+    "http://ww3.sinaimg.cn/large/006tNbRwgy1ffrqarbpb1j30dc06odgw.jpg",
+    "http://ww4.sinaimg.cn/large/006tNbRwgy1ffrqb1t147j30r80kfdkw.jpg",
+    "http://ww2.sinaimg.cn/large/006tNbRwgy1ffrqb83ynaj30hs0a3diy.jpg",
+    "http://ww4.sinaimg.cn/large/006tNbRwgy1ffrqbeb3lgj30b408ctd5.jpg",
+    "http://ww4.sinaimg.cn/large/006tNbRwgy1ffrqbloodsj30p00gowj0.jpg",
+    "http://ww4.sinaimg.cn/large/006tNbRwgy1ffrqbtofakj30c807sdgi.jpg",
+    "http://ww3.sinaimg.cn/large/006tNbRwgy1ffrqceyovbj30m80etgx2.jpg",
+    "http://ww1.sinaimg.cn/large/006tNbRwgy1ffrqcrtif5j30h40cu75f.jpg",
+    "http://ww1.sinaimg.cn/large/006tNbRwgy1ffrqd72vprj30p00e2my3.jpg",
+    "http://ww3.sinaimg.cn/large/006tNbRwgy1ffrqdgbtptj30ec09k42j.jpg",
+    "http://ww4.sinaimg.cn/large/006tNbRwgy1ffrqdo4poej30dw099wfq.jpg",
+    "http://ww1.sinaimg.cn/large/006tNbRwgy1ffrqe008olj30le0c8q9k.jpg"
+  ]
+
+  for i in 0..15 do
     Product.create!(
     title: f_title[i],
-    description:"flower",
-    quantity:100,
-    price:rand(10..50),
-    image: open(f_images[i]))
+    description:"这只是底料，请去购物车DIY！",
+    quantity:10,
+    price:rand(50..100)*10,
+    photo[0]:open(f_images[i]))
   end
