@@ -89,7 +89,7 @@ end
   # puts "2"
   for i in 0..15 do
     Photo.create!(product_id: (i+1) ,avatar:open(f_images [i]))
-    # Photo.create!(product_id: (i+1) ,avatar:open(f_images [2 * i]))
+    # Photo.create!(product_id: (i+1) ,avatar:open(f_image2s [i]))
   end
 
 puts "16份食物已经煮好了，就是不给你吃."
