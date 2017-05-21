@@ -11,14 +11,14 @@
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
 production:
-  qiniu_access_key: qgdoVFxOwnKNEMicOfY2CpRLGd6srsxWcXYb2WHW  # 你的 qiniu AccessKey
-  qiniu_secret_key: lWBetGmVy66G4hmYT-ACrEu6APxWdKufU_rs_J8N  # 你的 qiniu SecretKey
-  qiniu_bucket: dark-cuisine  # 你的 qiniu bucket
-  qiniu_bucket_domain: oq8s17pbs.bkt.clouddn.com  # 你的 qiniu bucket domain
+  qiniu_access_key: SzlH_hxkwVFvVhDUXukgQQO0ZArHD7xSCp_TLiOm  # 你的 qiniu AccessKey
+  qiniu_secret_key: 2Lie83_z4bkxq0UD7YyNBFr7U0BpsQMLDOqCTMN3  # 你的 qiniu SecretKey
+  qiniu_bucket: 99qiniu  # 你的 qiniu bucket
+  qiniu_bucket_domain: oqapqoh4f.bkt.clouddn.com  # 你的 qiniu bucket domain
 
 
 development:
-  qiniu_access_key: qgdoVFxOwnKNEMicOfY2CpRLGd6srsxWcXYb2WHW  # 你的 qiniu AccessKey
-  qiniu_secret_key: lWBetGmVy66G4hmYT-ACrEu6APxWdKufU_rs_J8N  # 你的 qiniu SecretKey
-  qiniu_bucket: dark-cuisine  # 你的 qiniu bucket
-  qiniu_bucket_domain: oq8s17pbs.bkt.clouddn.com  # 你的 qiniu bucket domain
+  qiniu_access_key: SzlH_hxkwVFvVhDUXukgQQO0ZArHD7xSCp_TLiOm  # 你的 qiniu AccessKey
+  qiniu_secret_key: 2Lie83_z4bkxq0UD7YyNBFr7U0BpsQMLDOqCTMN3  # 你的 qiniu SecretKey
+  qiniu_bucket: 99qiniu  # 你的 qiniu bucket
+  qiniu_bucket_domain: oqapqoh4f.bkt.clouddn.com  # 你的 qiniu bucket domain
