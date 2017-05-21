@@ -17,7 +17,7 @@
 </div>
 
 
-<div class="panel panel-default">
+<!-- <div class="panel panel-default">
   <div class="panel-heading">
     <img src='<%= image_url 'logo1.png' %>'>
   </div>
@@ -27,7 +27,6 @@
       <div class="form-inputs">
         <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "邮箱" %>
         <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "用户名" %>
-        <!-- <%= f.input :is_admin, as: :radio_buttons, collection:  [['一般用户', false], ['企业用户', true]], required: true %> -->
         <%= f.input :password, required: true, autofocus: true, label: false, placeholder: "密码", hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
         <%= f.input :password_confirmation, required: true, autofocus: true, label: false, placeholder: "重复密码" %>
       </div>
@@ -41,4 +40,4 @@
       <%= render "devise/shared/links" %>
     </span>
   </div>
-</div>
+</div> -->
