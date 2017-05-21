@@ -345,23 +345,24 @@
 
 
 <!-- **LOGO分栏（Navbar与大图之间）**--><!-- **LOGO分栏（Navbar与大图之间）**-->
-    <div class="container-fluid nav-to-nav-1">
-      <div class="col-md-6">
-        <img src='<%= image_url 'logo1.png' %>'>
-      </div><!-- /#logo -->
+<div class="container-fluid nav-to-nav-1">
+   <div class="col-md-6">
+     <img src='<%= image_url 'logo1.png' %>'>
+   </div><!-- /#logo -->
 
-      <div class="col-md-6">
-        	<ul id="header-navigation" class="sf-menu clearfix unstyled-all nav-button-1">
-            <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item level-0 top-level-item to-right">
-              <a href="/">首页</a>
-            </li>
-            <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page level-0 top-level-item to-right">
-              <a href="products">底料</a>
-            </li>
-            <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page level-0 top-level-item to-right">
-              <a href="carts">起点
-                <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )</a>
-            </li>
-          </ul>
-        </div>
-    </div>
+   <div class="col-md-6">
+       <ul id="header-navigation" class="sf-menu clearfix unstyled-all nav-button-1">
+         <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item level-0 top-level-item to-right">
+           <a href="/">首页啦</a>
+         </li>
+         <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page level-0 top-level-item to-right">
+           <%= link_to("底料们", products_path) %>
+         </li>
+         <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page level-0 top-level-item to-right">
+         <%= link_to carts_path do  %>
+          实验室 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+         <% end %>
+         </li>
+       </ul>
+     </div>
+ </div>

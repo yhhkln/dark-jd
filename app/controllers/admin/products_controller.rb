@@ -28,7 +28,7 @@ class Admin::ProductsController < ApplicationController
           @photo = @product.photos.create(:avatar => a)
         end
       end
-     redirect_to products_path
+      redirect_to admin_products_path
     else
      render :new
     end
@@ -36,13 +36,16 @@ class Admin::ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
+
     if params[:photos] != nil
       @product.photos.destroy_all #need to destroy old pics first
       params[:photos]['avatar'].each do |a|
         @picture = @product.photos.create(:avatar => a)
       end
+
       @product.update(product_params)
       redirect_to admin_products_path
+
     elsif @product.update(product_params)
       redirect_to admin_products_path
     else
