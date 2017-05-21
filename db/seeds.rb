@@ -60,10 +60,22 @@ end
   for i in 0..15 do
     Product.create!(
     title: f_title[i],
-    description:"这只是底料，请去购物车DIY！",
+    description:"这只是底料，请去实验室DIY！",
     quantity:rand(6..10),
     price:rand(50..100)*10,
-    image: open(f_images[i])
+    # image: open(f_images[i])
+    # product_id:[i],avatar:open(f_images[i])
     )
   end
+
+  puts "1"
+
+  # Photo.create!(product_id:1,avatar: open(f_images[0]))
+  # Photo.create!(product_id:1,avatar: open(f_images[1]))
+  # puts "2"
+  for i in 0..15 do
+    Photo.create!(product_id: (i+1) ,avatar:open(f_images [i]))
+    # Photo.create!(product_id: (i+1) ,avatar:open(f_images [2 * i]))
+  end
+
 puts "16份食物已经煮好了，就是不给你吃."
