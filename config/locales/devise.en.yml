@@ -45,8 +45,8 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: "Your account has been updated successfully."
     sessions:
-      signed_in: "欢迎来到品位食验室"
-      signed_out: "出门左转，还有黑暗料理嘻嘻"
+      signed_in: "欢迎来到品位食验室挑战味蕾极限"
+      signed_out: "出门左转，还有黑暗料理，嘿嘿嘿"
       already_signed_out: "已经在实验室中了，哈哈"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
