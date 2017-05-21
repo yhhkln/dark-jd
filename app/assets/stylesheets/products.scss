@@ -715,6 +715,46 @@ body {
 
 
 //======================================== Product_Show ======================================//
+.bg-grey {
+  background-color: #F9F9F9;
+  padding: 12px;
+  margin-left: -2%;
+  margin-bottom: 2%;
+}
+.pr1 {
+  font-weight: 400;
+}
+.pr2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #C73234;
+}
+.pr3 {
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+#btn-primary-1 {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #C73234;
+  padding: 10px 23px 10px 23px;
+  text-decoration: none;
+  font-weight: 500;
+}
+#btn-primary-1:hover {
+  background: #e83659;
+  text-decoration: none;
+}
+.posi-comment-1 {
+  margin-top: 50px;
+}
+.row-comment-1 {
+  margin-bottom: 40px;
+}
 //======================================== Product_Show ======================================//
 @font-face {
   font-family: 'Decour';
