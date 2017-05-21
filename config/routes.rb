@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :comments
-  devise_for :users, :controllers => { :registrations => "users/registrations" }
+  devise_for :users, :controllers => { :registrations => "users/registrations" }, :controllers => { :sessions => "users/sessions" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do
     resources :products do
