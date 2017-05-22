@@ -25,6 +25,7 @@
 }
 
 //=============== Navbar ===============//
+//**第一行：红色导航**
 .row-nav-1 {
   background-color: #C73234;
   margin-right: -20px;
@@ -38,9 +39,16 @@
   font-weight: 400;
   margin-top: 10px;
 }
+.input-group {//搜索
+  width:200px;
+  margin-top: -13px;
+  margin-right: 20px;
+}
+//**第二行：logo、按钮**
 .row-nav-2 {
   background-color:#fff;
   margin-top:-15px;
+  margin-right: -20px;
   text-align:center;
 }
 .img-nav-1 {
@@ -67,12 +75,6 @@
   background: #3D3D3D;
   text-decoration: none;
 }
-//**搜索**
-.input-group {
-  width:200px;
-  margin-top: -13px;
-  margin-right: 20px;
-}
 //**navbar置顶**
 .navbar-fixed-top {
     top: 0px;
@@ -86,12 +88,12 @@
     z-index: 1030;
 }
 
-
-//=============== Welcome_Index ===============//
+//=============== Welcome_Box ===============//
 //**大图**
-.tp-black-1 {//透明条
+.font-bg-1 {//透明条
   top: 43%!important;
 }
+//=============== Welcome_Index ===============//
 //**购物流程**
 .font-h-1 {
   text-align: center;
@@ -114,6 +116,7 @@
   background-repeat: repeat !important;
   padding-bottom: 40px;
   margin-bottom: 50px;
+  padding-left: -10px;
 }
 //**关于我们**
 .panel-same-1 {
@@ -197,14 +200,58 @@
   color: #913131;
 }
 
-
 //=============== Command_Footer ===============//
-//**字体**
-// .font-OpenSans-14 {
-//   font-size: 13px;
-//   font-weight: 400;
-//   color: #fff!important;
-// }
+.row-foot-1 {
+  padding-top: 60px;
+}
+.hr-foot-1 {
+  border-color: #888888;
+  background-color: #888888;
+  height: 1px;
+  margin-top: -8px;
+  margin-bottom: 20px;
+}
+.hr-foot-2 {
+  border: 0;
+  height: 1px;
+  background-color: #444444;
+  border-style: double;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.font-color-foot a {
+  color: #fff;
+  font-size: 14px;
+}
+.font-color-foot a:hover {
+  color: red;
+}
+.font-color-foot h5 {
+  color: #fff;
+}
+.img-posi-1 {
+  text-align:center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.img-foot-1 {
+  width:300px;
+  text-align:center;
+  text-align:center;
+}
+.p-bg-1 {
+  background-color: #444444;
+}
+.p-posi-1 {
+  text-align:center;
+  color:#fff;
+  font-weight:400;
+  padding:15px;
+}
+.p-posi-2 {
+  text-align:center;
+  color:#fff;
+}
 
 //=============== 评论 Products_Show ===============//
 #btn-primary-2 {
