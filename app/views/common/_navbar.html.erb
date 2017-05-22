@@ -41,17 +41,15 @@
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
+<div class="container-fluid"><!--==logo/按钮===-->
+  <div class="row row-nav-2">
     <div class="col-md-12 col-sm-12 col-xs-12">
-
-      <img src='<%= image_url 'logo1.png' %>'>
+      <img src='<%= image_url 'logo1.png' %>' class="img-nav-1">
       <%= link_to("首页啦", root_path, id: "btn-nav-2") %>
       <%= link_to("底料们", products_path, id: "btn-nav-2") %>
       <%= link_to carts_path, id: "btn-nav-2" do  %>
         实验室 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
       <% end %>
-
     </div>
   </div>
 </div>
