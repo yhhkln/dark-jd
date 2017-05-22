@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>TASTE LAVORATORY</title>
-        <%= csrf_meta_tags %>
+  <head>
+    <title>TASTE LAVORATORY</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    </head>
-
-    <body>
-
-        <div class="container-fluid" style="margin-left:-20px; margin-right:-20px;">
-          <div class="navbar-fixed-top">
-            <%= render "common/navbar" %>
-          </div>
-          <div style="margin-top:160px;">
-            <%= render "common/flashes" %>
-            <%= yield %>
-          </div>
-        </div>
-
-        <%= render "common/footer" %>
-
-    </body>
+  <body>
+    <div class="container-fluid" style="margin-right:-25px; margin-left:-10px;">
+      <div class="navbar-fixed-top">
+        <%= render "common/navbar" %>
+      </div>
+      <div style="margin-top:160px;">
+        <%= render "common/flashes" %>
+        <%= yield %>
+      </div>
+    </div>
+    <%= render "common/footer" %>
+  </body>
 </html>

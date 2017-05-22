@@ -25,46 +25,55 @@
 }
 
 //=============== Navbar ===============//
-//**红色导航**
-.navbar-color-1 {
-   border-color:#C73234;
-   border-radius:0px;
-   border: 20px;
-   background-color: #fff;
-}
-.navbar-default .navbar-nav > li > a {//小导航字体
-  color: #fff;
-  margin-top: -5px;
-  margin-right: 20px;
-  margin-left: -30px;
-}
-.navbar .container-fluid {//小导航满屏
-  margin-left: -20px;
+//**第一行：红色导航**
+.row-nav-1 {
+  background-color: #C73234;
   margin-right: -20px;
+  height: 40px;
 }
-.font-nav-log-1 {
+.posi-nav-1 {
+  margin-right: 15px;
+}
+#font-nav-1 {
+  color: #fff;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.input-group {//搜索
+  width:200px;
+  margin-top: -13px;
+  margin-right: 20px;
+}
+//**第二行：logo、按钮**
+.row-nav-2 {
+  background-color:#fff;
+  margin-top:-15px;
+  margin-right: -20px;
+  text-align:center;
+}
+.img-nav-1 {
+  width:350px;
+  padding:10px 0px;
+  margin-right:100px;
+}
+#btn-nav-2 {
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 1px #000000;
+  -moz-box-shadow: 0px 2px 1px #000000;
+  box-shadow: 0px 2px 1px #000000;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  background: #D81315;
+  padding: 20px 20px 18px 20px;
+  text-decoration: none;
   font-weight: 400;
 }
-
-//** logo、按钮 **
-.nav-to-nav-1 {//位置
-  margin-top: -20px;
-  background-color: #fff;
-}
-.nav-to-nav-1 .col-md-6 img {//logo
-  width: 40%;
-  margin-left: 35%;
-}
-.nav-button-1 {
-  padding-right: 25%;
-  padding-top: 4%;
-}
-//**搜索**
-.input-group {
-  width:200px;
-  margin-top: 5px;
-  padding-bottom: 0px;
-  margin-right: 20px;
+#btn-nav-2:hover {
+  background: #3D3D3D;
+  text-decoration: none;
 }
 //**navbar置顶**
 .navbar-fixed-top {
@@ -79,12 +88,12 @@
     z-index: 1030;
 }
 
-
-//=============== Welcome_Index ===============//
+//=============== Welcome_Box ===============//
 //**大图**
-.tp-black-1 {//透明条
+.font-bg-1 {//透明条
   top: 43%!important;
 }
+//=============== Welcome_Index ===============//
 //**购物流程**
 .font-h-1 {
   text-align: center;
@@ -107,6 +116,7 @@
   background-repeat: repeat !important;
   padding-bottom: 40px;
   margin-bottom: 50px;
+  padding-left: -10px;
 }
 //**关于我们**
 .panel-same-1 {
@@ -190,13 +200,57 @@
   color: #913131;
 }
 
-
 //=============== Command_Footer ===============//
-//**字体**
-.font-OpenSans-14 {
-  font-size: 13px;
-  font-weight: 400;
-  color: #fff!important;
+.row-foot-1 {
+  padding-top: 60px;
+}
+.hr-foot-1 {
+  border-color: #888888;
+  background-color: #888888;
+  height: 1px;
+  margin-top: -8px;
+  margin-bottom: 20px;
+}
+.hr-foot-2 {
+  border: 0;
+  height: 1px;
+  background-color: #444444;
+  border-style: double;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.font-color-foot a {
+  color: #fff;
+  font-size: 14px;
+}
+.font-color-foot a:hover {
+  color: red;
+}
+.font-color-foot h5 {
+  color: #fff;
+}
+.img-posi-1 {
+  text-align:center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.img-foot-1 {
+  width:300px;
+  text-align:center;
+  text-align:center;
+}
+.p-bg-1 {
+  background-color: #444444;
+}
+.p-posi-1 {
+  text-align:center;
+  color:#fff;
+  font-weight:500;
+  padding:15px;
+}
+.p-posi-2 {
+  text-align:center;
+  color:#fff;
 }
 
 //=============== 评论 Products_Show ===============//
