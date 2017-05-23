@@ -4,7 +4,7 @@
 <div class="row row-cart-1">
   <div class="col-md-8 col-centered">
 
-     <div class="gray-box">
+     <div class="gray-box" style="border-color:#999999">
         <div class="title">
           <%= link_to("清空实验室", clean_carts_path ,
                       method: :delete , class: "pull-right",
@@ -37,7 +37,7 @@
                       <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
                     <% end %>
                   <% end %>
-                  <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
+                  <%= link_to(cart_item.product.title, product_path(cart_item.product),style:"font-weight:500") %>
                 </td>
 
                 <td>
@@ -90,9 +90,8 @@
       </div>
 
       <hr>
-
-      <div class="checkout clearfix">
-        <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
+      <div class="pull-right btn-posi-cart-1">
+        <%= link_to("确认结账", checkout_carts_path, method: :post, id:"btn-primary-cart-1") %>
       </div>
     </div>
 

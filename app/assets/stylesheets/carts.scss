@@ -16,6 +16,28 @@
 .row-cart-1 {
   margin-top: 50px;
   margin-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#btn-primary-cart-1 {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #D81315;
+  padding: 10px 23px 10px 23px;
+  text-decoration: none;
+  font-weight: 500;
+
+}
+#btn-primary-cart-1:hover {
+  background: #e83659;
+  text-decoration: none;
+}
+.btn-posi-cart-1 {
+  margin: -5px 10px 15px 10px;
 }
 
 

@@ -1,8 +1,11 @@
+<div class="img-cart-1">
+</div>
+
 <div class="container-fluid">
-  <div class="row row-comment-1">
+  <div class="row row-pro-show-1">
     <div class="col-md-8 col-centered">
 
-      <div class="col-md-5">
+      <div class="col-md-5 col-sm-5 col-xs-5">
         <!-- <% if @product.image.present? %>
           <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
         <% else %>
@@ -19,11 +22,11 @@
           <% end %>
               </div>
           <% else %>
-            <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+            <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
         <% end %>
       </div>
 
-      <div class="col-md-7">
+      <div class="col-md-7 col-sm-7 col-xs-7">
         <h2> <%= @product.title %> </h2>
         <p class="pr1">
           <%= @product.description %>
@@ -45,10 +48,10 @@
         </div>
       </div>
 
-      <div class="col-md-12">
+      <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="panel panel-default posi-comment-1">
           <div class="panel-heading">
-            <h3 class="comments_title">
+            <h3>
               菜品评价（<%= @product.comments.count %> ）
             </h3>
           </div>
