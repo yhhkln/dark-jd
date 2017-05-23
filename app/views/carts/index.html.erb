@@ -1,109 +1,101 @@
 <div class="row">
+  <img src="http://ww1.sinaimg.cn/large/006tKfTcgy1ffv83zn1yfj31hc03mjrw.jpg" alt="">
+</div>
 
-  <div class="">
+<div class="row row-cart-1">
+  <div class="col-md-8 col-centered">
 
-
-    <div class="main">
-       <!-- ngIf: !!pageLoading -->
-       <!-- ngView:  -->
-       <div ng-view="" autoscroll="true" ng-show="!pageLoading" class="ng-scope">
-          <div class="store-content page-cart ng-scope">
-             <div class="gray-box">
-                <div class="title">
-                  <%= link_to("清空实验室", clean_carts_path ,
-                              method: :delete , class: "pull-right",
-                              style: "text-decoration: underline;",
-                              data: { confirm: "你确定要清空整个实验室吗？"} )%>
-                  <h2> 实验室呦 </h2>
-                </div>
-                <table class="table table-bordered">
-                  <thead>
-
-                    <tr class="cart-table-title">
-                      <th>商品资讯</th>
-                      <th>DIY</th>
-                      <th>单价</th>
-                      <th>数量</th>
-                      <th>操作选项</th>
-                    </tr>
-
-                  </thead>
-                  <tbody>
-
-                    <% current_cart.cart_items.each do |cart_item| %>
-                      <tr>
-
-                        <td>
-                          <%= link_to product_path(cart_item.product) do %>
-                            <% if cart_item.product.photos[0].present? %>
-                              <%= image_tag(cart_item.product.photos[0].avatar.thumb.url, class: "thumbnail") %>
-                            <% else %>
-                              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-                            <% end %>
-                          <% end %>
-                          <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
-                        </td>
-
-                        <td>
-                          <!-- 乱搞的开始 -->
-                          <%= simple_form_for cart_item.product do |f| %>
-                            <%= f.input :salt, :label => "盐(g)" %>
-                            <%= f.input :sugar, :label => "糖(g)" %>
-                            <%= f.input :papper, :label => "胡椒粉(g)" %>
-                            <%= f.input :sauces, :label => "酱油(ml)" %>
-                            <%= f.input :vinegar, :label => "醋(ml)" %>
-                            <%= f.input :oil, :label => "油(ml)" %>
-                            <%= f.submit "调好味道了", data: { disable_with: "Submitting..." } %>
-                          <% end %>
-                          <!-- 乱搞的结束 -->
-                        </td>
-                        <td>
-                          <%= cart_item.product.price %>
-                        </td>
-                        <td>
-                          <%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
-                          <%= f.select :quantity, 1..cart_item.product.quantity %>
-                            <%= f.submit "更新", data: { disable_with: "Submiting..." } %>
-                          <% end %>
-                        </td>
-                        <td>
-                          <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
-                            <i class="fa fa-trash"></i>
-                          <% end %>
-                        </td>
-                      </tr>
-                    <% end %>
-
-                  </tbody>
-                </table>
-
-                <br>
-                 <span class="pull-right">
-                <div class="shipping-total shipping-price">
-                   <h4 ng-class="{'highlight': cartOrder.totalPrice &gt; 0}" class="highlight">
-                     应付总额：
-                     <i ng-bind="cartOrder.totalPrice" class="ng-binding">
-                       <%= render_cart_total_price(current_cart) %> ￥</i></h4>
-
-                </div>
-              </span>
-
-
-                <div class="total clearfix">
-
-                </div>
-
-                <hr>
-
-                <div class="checkout clearfix">
-
-                  <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
-                </div>
-              </div>
-            </div>
-
-
-              </div>
-            </div>
-          </div>
+     <div class="gray-box">
+        <div class="title">
+          <%= link_to("清空实验室", clean_carts_path ,
+                      method: :delete , class: "pull-right",
+                      style: "text-decoration: underline;",
+                      data: { confirm: "你确定要清空整个实验室吗？"} )%>
+          <h2> 实验室呦 </h2>
         </div>
+        <table class="table table-bordered">
+          <thead>
+
+            <tr class="cart-table-title">
+              <th>商品资讯</th>
+              <th>DIY</th>
+              <th>单价</th>
+              <th>数量</th>
+              <th>操作选项</th>
+            </tr>
+
+          </thead>
+          <tbody>
+
+            <% current_cart.cart_items.each do |cart_item| %>
+              <tr>
+
+                <td>
+                  <%= link_to product_path(cart_item.product) do %>
+                    <% if cart_item.product.photos[0].present? %>
+                      <%= image_tag(cart_item.product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+                    <% else %>
+                      <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+                    <% end %>
+                  <% end %>
+                  <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
+                </td>
+
+                <td>
+                  <!-- 乱搞的开始 -->
+                  <%= simple_form_for cart_item.product do |f| %>
+                    <%= f.input :salt, :label => "盐(g)" %>
+                    <%= f.input :sugar, :label => "糖(g)" %>
+                    <%= f.input :papper, :label => "胡椒粉(g)" %>
+                    <%= f.input :sauces, :label => "酱油(ml)" %>
+                    <%= f.input :vinegar, :label => "醋(ml)" %>
+                    <%= f.input :oil, :label => "油(ml)" %>
+                    <%= f.submit "调好味道了", data: { disable_with: "Submitting..." } %>
+                  <% end %>
+                  <!-- 乱搞的结束 -->
+                </td>
+                <td>
+                  <%= cart_item.product.price %>
+                </td>
+                <td>
+                  <%= form_for cart_item, url: cart_item_path(cart_item.product_id) do |f| %>
+                  <%= f.select :quantity, 1..cart_item.product.quantity %>
+                    <%= f.submit "更新", data: { disable_with: "Submiting..." } %>
+                  <% end %>
+                </td>
+                <td>
+                  <%= link_to cart_item_path(cart_item.product_id), method: :delete do %>
+                    <i class="fa fa-trash"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+
+          </tbody>
+        </table>
+
+        <br>
+         <span class="pull-right">
+        <div class="shipping-total shipping-price">
+          <h4 ng-class="{'highlight': cartOrder.totalPrice &gt; 0}" class="highlight">
+             应付总额：
+          <i ng-bind="cartOrder.totalPrice" class="ng-binding">
+            <%= render_cart_total_price(current_cart) %> ￥
+          </i>
+          </h4>
+        </div>
+      </span>
+
+
+      <div class="total clearfix">
+      </div>
+
+      <hr>
+
+      <div class="checkout clearfix">
+        <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
+      </div>
+    </div>
+
+  </div>
+</div>
