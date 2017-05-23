@@ -1,5 +1,5 @@
 class DproductsController < ApplicationController
-
+	layout "dproduct"
 	def index
    	@dproducts = Dproduct.all
  	end
