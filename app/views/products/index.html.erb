@@ -1,54 +1,27 @@
 <div class="row">
-
+  <img src="http://ww1.sinaimg.cn/large/006tKfTcgy1ffv83zn1yfj31hc03mjrw.jpg" alt="">
 </div>
 
-
-
-  <main role="main" class="c-main-container">
-   <section class="container-fluid c-main-content">
-
-    <div class="c-search c-search--recipes-landing">
-
-
-
-    </div>
-    <div class="m-media-list c-recipe-list">
-         </div>
-      <div class="m-media__content">
-
-
-       <% @products.each do |product| %>
-         <div class="col-xs-6 col-md-3">
-           <%= link_to product_path(product) do %>
-             <!-- <% if product.image.present? %>
-               <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-             <% else %>
-               <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-             <% end %> -->
-             <% if product.photos.present? %>
-              <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
-              <% else %>
-                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-              <% end %>
-           <% end %>
-           <div class="title-weight">
+<div class="row row-pro-index-2">
+  <div class="col-md-8 col-centered">
+     <% @products.each do |product| %>
+       <div class="col-md-3 col-sm-6 col-xs-6">
+         <%= link_to product_path(product) do %>
+           <!-- <% if product.image.present? %>
+             <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+           <% else %>
+             <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+           <% end %> -->
+           <% if product.photos.present? %>
+            <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+            <% else %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+            <% end %>
+         <% end %>
+         <div class="font-pro-index-1">
            <%= product.title %>
          </div>
-         </div>
-       <% end %>
-
-      </div> </a>
-
-
-
-    </div>
-    <div class="c-btn-holder">
-     <a href="#top" class="a-btn--btt js-slide-page"> <i class="a-icon-chevron">
-       <svg width="50" height="50" viewbox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" stroke-linejoin="round">
-        <path d="M49.9 50l-50 0 0-50 50 0 0 50ZM3.4 46.6l43 0 0-43-43 0 0 43Z"></path>
-        <path class="icon" d="M34.7 32.3l-9.8-13.1-9.7 12.9-2.8-2 12.5-16.7 12.6 16.9-2.8 2Z"></path>
-       </svg> </i> </a>
-    </div>
-   </section>
-   <div class="push"></div>
-  </main>
+       </div>
+     <% end %>
+  </div>
+</div>
