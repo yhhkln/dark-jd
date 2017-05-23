@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523090617) do
+ActiveRecord::Schema.define(version: 20170523154746) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -33,6 +33,39 @@ ActiveRecord::Schema.define(version: 20170523090617) do
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_comments_on_product_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "dcart_items", force: :cascade do |t|
+    t.integer  "dcart_id"
+    t.integer  "dproduct_id"
+    t.integer  "quantity",    default: 1
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "dcarts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dorders", force: :cascade do |t|
+    t.integer  "total",            default: 0
+    t.integer  "user_id"
+    t.string   "billing_name"
+    t.string   "billing_address"
+    t.string   "shipping_name"
+    t.string   "shipping_address"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  create_table "dproduct_lists", force: :cascade do |t|
+    t.integer  "dorder_id"
+    t.string   "dproduct_name"
+    t.integer  "dproduct_price"
+    t.integer  "quantity"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "dproducts", force: :cascade do |t|
