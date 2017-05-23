@@ -1,13 +1,6 @@
 <div class="container-fluid">
   <div class="row row-nav-1">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-      <li>
-        <%= link_to dcarts_path do  %>
-          购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_dcart.dproducts.count %> )
-        <% end %>
-      </li>
-
       <ul><!--==注册/登录===-->
         <% if !current_user %>
           <%= link_to("注册", new_user_registration_path, class: "pull-right", id: "font-nav-1") %>
