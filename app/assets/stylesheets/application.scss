@@ -27,7 +27,7 @@
 //=============== Navbar ===============//
 //**第一行：红色导航**
 .row-nav-1 {
-  background-color: #C73234;
+  background-color: #D81315;
   margin-right: -20px;
   height: 40px;
 }
@@ -36,7 +36,8 @@
 }
 #font-nav-1 {
   color: #fff;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   margin-top: 10px;
 }
 .input-group {//搜索
@@ -69,7 +70,7 @@
   background: #D81315;
   padding: 20px 20px 18px 20px;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
 }
 #btn-nav-2:hover {
   background: #3D3D3D;
