@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  namespace :dadmin do
+    resources :dproducts
+  end
   resources :comments
   devise_for :users, :controllers => { :registrations => "users/registrations", :sessions => "users/sessions" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -50,6 +54,8 @@ Rails.application.routes.draw do
   namespace :account do
     resources :orders
   end
+
+  resources :dproducts
 
   root 'welcome#index'
 end

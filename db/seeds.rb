@@ -5,6 +5,7 @@ if User.find_by(email: "admin@test.com").nil?
   u.password = "111111"                # 最少要六码
   u.password_confirmation = "111111"   # 最少要六码
   u.is_admin = true
+  u.is_dadmin = true
   u.save
   puts "Admin 已经建立好了，帐号为#{u.email}, 密码为#{u.password}"
 else
@@ -17,6 +18,7 @@ if User.find_by(email: "122380981@qq.com").nil?
   u.password = "111111"                # 最少要六码
   u.password_confirmation = "111111"   # 最少要六码
   u.is_admin = true
+  u.is_dadmin = true
   u.save
   puts "Admin 已经建立好了，帐号为#{u.email}, 密码为#{u.password}"
 else
