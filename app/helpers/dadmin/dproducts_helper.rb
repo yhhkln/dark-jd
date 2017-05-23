@@ -1,0 +1,2 @@
+module Dadmin::DproductsHelper
+end

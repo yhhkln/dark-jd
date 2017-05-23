@@ -17,6 +17,9 @@
                   <%= link_to("Admin 选单", admin_products_path ) %>
                 </li>
                 <li>
+                  <%= link_to("Dadmin 选单", dadmin_dproducts_path ) %>
+                </li>
+                <li>
                   <%= link_to("我的订单", account_orders_path ) %>
                 </li>
               <% end %>
@@ -48,6 +51,8 @@
       <%= link_to carts_path, id: "btn-nav-2" do  %>
         实验室 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
       <% end %>
+
+
     </div>
   </div>
 </div>
