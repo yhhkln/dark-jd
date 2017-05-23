@@ -30,4 +30,21 @@ class ApplicationController < ActionController::Base
     session[:cart_id] = cart.id
     return cart
   end
+
+  helper_method :current_dcart
+
+  def current_dcart
+    @current_dcart ||= find_dcart
+  end
+
+  private
+
+  def find_dcart
+    dcart = Dcart.find_by(id: session[:cart_id])
+    if dcart.blank?
+      dcart = Dcart.create
+    end
+    session[:dcart_id] = dcart.id
+    return dcart
+  end
 end
