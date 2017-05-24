@@ -5,7 +5,7 @@ class DcartsController < ApplicationController
    	redirect_to dcarts_path
  	end
 
-	def checkout
+	def dcheckout
     @dorder = Dorder.new
   end
 
