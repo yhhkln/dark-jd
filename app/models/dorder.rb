@@ -32,8 +32,8 @@ class Dorder < ApplicationRecord
     state :good_returned
 
 
-    event :make_payment do
-      transitions from: :dorder_placed, to: :paid
+		event :make_payment, after_commit: :pay! do
+	    transitions from: :dorder_placed, to: :paid
     end
 
     event :ship do
