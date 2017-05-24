@@ -95,7 +95,7 @@ title = [
     "罗马花椰菜",
     "紫土豆",
     "洋蓟",
-    "",
+    "四棱豆",
   ]
   images = [
     "https://ws2.sinaimg.cn/large/006tNc79gy1ffws0503l1j31hc0xcdph.jpg",
