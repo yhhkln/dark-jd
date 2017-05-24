@@ -13,41 +13,44 @@
   <% end %>
 </div> -->
 
-
-<img src="http://ww4.sinaimg.cn/large/006tKfTcgy1ffvjrrgjtej31hc0u016z.jpg" style="position:relative;">
-
-<a href="/" class="img-index-posi-1">
-  <img src='<%= image_url 'D1.png' %>'>
-</a>
-
-<a href="/" class="img-index-posi-2">
-  <img src='<%= image_url 'D2.png' %>'>
-</a>
-
-<a href="/" class="img-index-posi-3">
-  <img src='<%= image_url 'D3.png' %>'>
-</a>
+<div class="img-bg-dindex-1">
+  <div class="row">
+    <div class="pic-dindex-1">
+      <a href="/" style="position:absolute;">
+        <img src='<%= image_url 'D1.png' %>'>
+      </a>
+      <div class="clearfix"></div>
+    </div>
+    <div class="pic-dindex-2">
+      <a href="/" style="position:absolute;">
+        <img src='<%= image_url 'D2.png' %>'>
+      </a>
+    </div>
+    <div class="pic-dindex-3">
+      <a href="/" style="position:absolute;">
+        <img src='<%= image_url 'D3.png' %>'>
+      </a>
+    </div>
+  </div>
+</div>
 
 
 <div class="row row-pro-index-2">
   <div class="col-md-8 col-centered">
     <% @dproducts.each do |dproduct| %>
       <div class="col-md-3 col-sm-3 col-xs-6 ">
-        <%= link_to dproduct_path(dproduct) do %>
-          <% if dproduct.image.present? %>
-            <%= image_tag(dproduct.image.thumb.url, class: "thumbnail") %>
-          <% else %>
-            <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-          <% end %>
+        <% if dproduct.image.present? %>
+          <%= image_tag(dproduct.image.thumb.url, class: "thumbnail img-dinex-1") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
         <% end %>
 
         <% if dproduct.quantity > 0 %>
-          <%= link_to("快到碗里来", add_to_dcart_dproduct_path(dproduct), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+          <%= link_to("快到碗里来", add_to_dcart_dproduct_path(dproduct), :method => :post, id:"btn-primary-dindex-1") %>
         <% else %>
-        <div class="btn btn-primary btn-lg btn-danger">
-          都在碗里了
-        </div>
+          <span id="btn-primary-dindex-1">都在碗里了</span>
         <% end %>
+          <span class="font-dindex-1"><%= dproduct.title %></span>
       </div>
     <% end %>
   </div>
