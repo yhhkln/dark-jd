@@ -1,0 +1,23 @@
+<h2>订单列表 </h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>生成时间</th>
+      <th>订购者</th>
+      <th>订单状态</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @dorders.each do |dorder| %>
+    <tr>
+      <td> <%= link_to(dorder.id, dadmin_dorder_path(dorder) ) %> </td>
+      <td> <%= dorder.created_at.to_s(:long) %> </td>
+      <td> <%= dorder.user.email %></td>
+      <td> <%= dorder.aasm_state %> </td>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>

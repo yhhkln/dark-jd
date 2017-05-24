@@ -1,0 +1,2 @@
+module Dadmin::DordersHelper
+end
