@@ -27,3 +27,58 @@
 <a href="/" class="img-index-posi-3">
   <img src='<%= image_url 'D3.png' %>'>
 </a>
+
+
+<div class="row row-pro-index-2">
+  <div class="col-md-12 col-centered">
+    <div class="col-md-3 col-sm-3 col-xs-6 ">
+      <img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ffwitp8iywj308y06xq6x.jpg" alt="">
+    </div>
+  </div>
+</div>
+<div class="pull-right">
+  <%= link_to("快到碗里来", add_to_dcart_dproduct_path(@dproducts), :method => :post) %>
+</div>
+
+
+
+< img src="http://ww4.sinaimg.cn/large/006tKfTcgy1ffvjrrgjtej31hc0u016z.jpg" style="position:relative;">
+
+<a href=" " class="img-index-posi-1">
+  < img src='<%= image_url 'D1.png' %>'>
+</a >
+
+<a href="/" class="img-index-posi-2">
+  < img src='<%= image_url 'D2.png' %>'>
+</a >
+
+<a href="/" class="img-index-posi-3">
+  < img src='<%= image_url 'D3.png' %>'>
+</a >
+
+<div class="img-cart-1">
+</div>
+
+<div class="row row-pro-index-2">
+  <div class="col-md-8 col-centered">
+     <% @dproducts.each do |dproduct| %>
+       <div class="col-md-3 col-sm-3 col-xs-6 " style="text-align:center;">
+         <%= link_to dproduct_path(dproduct) do %>
+
+          <% if dproduct.image.present? %>
+            <%= image_tag(dproduct.image.thumb.url, class: "thumbnail") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+          <% end %>
+
+         <% end %>
+         <% if dproduct.quantity > 0 %>
+           <%= link_to("快到碗里来", add_to_dcart_dproduct_path(dproduct), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+         <% else %>
+           都在碗里了
+         <% end %>
+         <p class="font-pro-index-1"><%= dproduct.title %></p >
+       </div>
+     <% end %>
+  </div>
+</div>
