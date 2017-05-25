@@ -1,82 +1,108 @@
 // Place all the styles related to the dproducts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.bg-dpro-index-1 {
-  background-image: url(http://ww3.sinaimg.cn/large/006tKfTcgy1ffvmxfsdruj307h07hacq.jpg);
-  background-size: 100% 100%;
-  background-color: red;
-  position: absolute;
-  width: 220px;
-  height: 220px;
+//大图部分
+.img-bg-dindex-1 {
+  position: relative;
+  height: 800px;
+  background-size: cover;                             //确保图片完全撑开
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(http://ww4.sinaimg.cn/large/006tKfTcgy1ffvjrrgjtej31hc0u016z.jpg);
+  img {
+    width: 240px;
+    height: 240px;
+  }
+}
+.pic-dindex-1 {
+  padding-left: 50px;
+  padding-top: 30px;
+}
+.pic-dindex-2 {
+  padding-left: 300px;
+  padding-top: 250px;
+}
+.pic-dindex-3 {
+  padding-left: 50px;
+  padding-top: 250px;
+}
+//详情列表
+#btn-primary-dindex-1 {
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #bfc5c9;
+  padding: 7px 7px 7px 7px;
+  text-decoration: none;
+}
+#btn-primary-dindex-1:hover {
+  background: #FFA800;
+  text-decoration: none;
+}
+.font-dindex-1 {
+  letter-spacing: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  padding:15px 30px;
+  border-radius: 5px;
+}
+.font-dindex-1:hover {
+  background-color: #000;
+}
+.img-dinex-1:hover {
+
+  opacity: 0.5;
 }
 
-
-.img-index-posi-1 {
-  position:absolute;
-  top:6%;
-  left:6%;
-  width: 250px;
-  height: 250px;
+.table-dindex-1 {
+  background: rgba(0,0,0,1);
+  position:relative;
+  text-align:center;
+  display: table;
+  // margin-left: 1px;
+  // margin-right: 1px;
+  // margin-bottom: 2px;
+  padding-left: 5px;
 }
-.img-index-posi-2 {
-  position:absolute;
-  top:34%;
-  left:23%;
-  width: 250px;
-  height: 250px;
+.table-dindex-1:hover {
+  background: rgba(0,0,0,0.2);
 }
-.img-index-posi-3 {
-  position:absolute;
-  top:60%;
-  left:6%;
-  width: 250px;
-  height: 250px;
-}
-.p-index-posi-1 {
-  position:absolute;
-  margin-top: -200px;
-  margin-left: 40px;
-  font-size: 60px;
-  font-weight: 900;
+.table-dindex-1 h1 {
   color: #fff;
 }
-.p-index-posi-2 {
-  position:absolute;
-  margin-top: -130px;
-  margin-left: 20px;
-  font-size: 50px;
-  font-weight: 900;
-  color: #fff;
+.text-index-1 {
+  height:200px;
+  vertical-align:middle;
+  display:table-cell;
+  z-index:3;
 }
-.p-index-posi-3 {
+.bg-dindex-1 {
+  // background-image:url(https://assets3.labelleassiette.com/media/uploads/0bdf863238dd337ff5e7b4c1994035b6.jpg);
   position:absolute;
-  margin-top: -120px;
-  margin-left: 90px;
-  font-size: 25px;
-  font-weight: 900;
-  color: #fff;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  z-index:-2;
 }
-.p-index-posi-4 {
-  position:absolute;
-  margin-top: -100px;
-  margin-left: 90px;
-  font-size: 25px;
-  font-weight: 900;
+.text-index-2 {
+  font-size: 130px;
   color: #fff;
+  font-weight: 900;
+  z-index:20;
+  vertical-align:middle;
+  display:table-cell;
 }
-.p-index-posi-5 {
-  position:absolute;
-  margin-top: -120px;
-  margin-left: 90px;
-  font-size: 25px;
-  font-weight: 900;
-  color: #fff;
+.text-index-2:hover {
+  color: rgba(0,0,0,0);
 }
-.p-index-posi-6 {
-  position:absolute;
-  margin-top: -100px;
-  margin-left: 90px;
-  font-size: 25px;
-  font-weight: 900;
+.font-shadow-1 {
   color: #fff;
+  font-weight: 900;
+  text-shadow: 0px 0px 5px #D81315;
+  z-index: 5;
 }
