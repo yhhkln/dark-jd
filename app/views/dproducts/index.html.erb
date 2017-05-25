@@ -1,22 +1,8 @@
-<!-- <div class="row">
-  <% @dproducts.each do |product| %>
-    <div class="col-xs-6 col-md-3">
-      <%= link_to dproduct_path(product) do %>
-        <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-        <% end %>
-      <% end %>
-      <%= product.title %> ￥ <%= product.price %>
-    </div>
-  <% end %>
-</div> -->
 <%= render "common/flashes" %>
 <div class="img-bg-dindex-1">
   <div class="row">
     <div class="pic-dindex-1">
-      <a style="position:absolute;">
+      <a href="#" style="position:absolute;">
         <img src='<%= image_url 'D1.png' %>'>
       </a>
       <div class="clearfix"></div>
@@ -35,32 +21,26 @@
     </div>
   </div>
 </div>
-<div class="row row-pro-index-2">
-  <div class="col-md-10 col-centered">
-    <% @dproducts.each do |dproduct| %>
-    <p class="font-shadow-1"><%= dproduct.title %></p>
-    <% if dproduct.quantity.present? && dproduct.quantity > 0 %>
+
+<div class="col-md-10 col-centered">
+  <% @dproducts.each do |dproduct| %>
+    <div class="col-md-3">
+
+      <% if dproduct.image.present? %>
+        <%= image_tag(dproduct.image.thumb.url, class: "") %>
+      <% else %>
+        <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+      <% end %>
+
+      <p class=""><%= dproduct.title %></p>
+      <% if dproduct.quantity.present? && dproduct.quantity > 0 %>
         <%= link_to(add_to_dcart_dproduct_path(dproduct), :method => :post, :class => "btn add2cart") do %>
-        加入后厨
+          加入后厨
         <% end %>
       <% else %>
-        Sold out, you cannot purchase
+          都在碗里了
       <% end %>
-        <div class="table-dindex-1 col-md-3 col-sm-3 col-xs-3">
-          <% if dproduct.image.present? %>
-            <%= image_tag(dproduct.image.thumb.url, class: "bg-dindex-1 ") %>
-          <% else %>
-            <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-          <% end %>
-        <div class="text-index-1">&nbsp;</div>
-        <div class="bg-dindex-1">&nbsp;</div>
-        <!-- <% if dproduct.quantity > 0 %>
-          <%= link_to("快到碗里来", add_to_dcart_dproduct_path(dproduct), :method => :post, id:"btn-primary-dindex-1") %>
-        <% else %>
-          <span id="btn-primary-dindex-1">都在碗里了</span>
-        <% end %> -->
-            <p class="text-index-1 text-index-2"></p>
-      </div>
-    <% end %>
-  </div>
+
+    </div>
+  <% end %>
 </div>
