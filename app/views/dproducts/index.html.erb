@@ -22,19 +22,26 @@
   </div>
 </div>
 
-<div class="col-md-10 col-centered">
+
+
+<div class="col-md-8 col-centered">
   <% @dproducts.each do |dproduct| %>
-    <div class="col-md-3">
+    <div class="col-md-3 col-sm-3 col-xs-6 table-dindex-1">
 
-      <% if dproduct.image.present? %>
-        <%= image_tag(dproduct.image.thumb.url, class: "") %>
-      <% else %>
-        <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-      <% end %>
+      <div class="">
+        <div class="text-index-1">
+          <span class="font-dindex-2">&nbsp;</span>
+        </div>
+        <% if dproduct.image.present? %>
+          <%= image_tag(dproduct.image.thumb.url, class: "bg-dindex-1") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+        <% end %>
+      </div>
 
-      <p class=""><%= dproduct.title %></p>
+      <h4 class="font-dindex-1"><%= dproduct.title %></h4>
       <% if dproduct.quantity.present? && dproduct.quantity > 0 %>
-        <%= link_to(add_to_dcart_dproduct_path(dproduct), :method => :post, :class => "btn add2cart") do %>
+        <%= link_to(add_to_dcart_dproduct_path(dproduct), :method => :post, :class => "btn add2cart font-dindex-3") do %>
           加入后厨
         <% end %>
       <% else %>
