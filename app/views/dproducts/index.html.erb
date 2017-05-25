@@ -12,11 +12,11 @@
     </div>
   <% end %>
 </div> -->
-
+<%= render "common/flashes" %>
 <div class="img-bg-dindex-1">
   <div class="row">
     <div class="pic-dindex-1">
-      <a href="/" style="position:absolute;">
+      <a style="position:absolute;">
         <img src='<%= image_url 'D1.png' %>'>
       </a>
       <div class="clearfix"></div>
@@ -27,35 +27,39 @@
       </a>
     </div>
     <div class="pic-dindex-3">
-      <a href="/" style="position:absolute;">
+      <!-- <a href="/" style="position:absolute;"> -->
+      <%= link_to dcarts_path do  %>
         <img src='<%= image_url 'D3.png' %>'>
-      </a>
+        <% end %>
+      <!-- </a> -->
     </div>
   </div>
 </div>
-
-
 <div class="row row-pro-index-2">
   <div class="col-md-10 col-centered">
     <% @dproducts.each do |dproduct| %>
-      <div class="table-dindex-1 col-md-3 col-sm-3 col-xs-3">
-        <% if dproduct.image.present? %>
-          <%= image_tag(dproduct.image.thumb.url, class: "bg-dindex-1 ") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+    <p class="font-shadow-1"><%= dproduct.title %></p>
+    <% if dproduct.quantity.present? && dproduct.quantity > 0 %>
+        <%= link_to(add_to_dcart_dproduct_path(dproduct), :method => :post, :class => "btn add2cart") do %>
+        加入后厨
         <% end %>
+      <% else %>
+        Sold out, you cannot purchase
+      <% end %>
+        <div class="table-dindex-1 col-md-3 col-sm-3 col-xs-3">
+          <% if dproduct.image.present? %>
+            <%= image_tag(dproduct.image.thumb.url, class: "bg-dindex-1 ") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+          <% end %>
         <div class="text-index-1">&nbsp;</div>
         <div class="bg-dindex-1">&nbsp;</div>
-
         <!-- <% if dproduct.quantity > 0 %>
           <%= link_to("快到碗里来", add_to_dcart_dproduct_path(dproduct), :method => :post, id:"btn-primary-dindex-1") %>
         <% else %>
           <span id="btn-primary-dindex-1">都在碗里了</span>
         <% end %> -->
-
-            <p class="text-index-1 font-shadow-1"><%= dproduct.title %></p>
-            <p class="text-index-1 text-index-2">密</p>
-
+            <p class="text-index-1 text-index-2"></p>
       </div>
     <% end %>
   </div>
