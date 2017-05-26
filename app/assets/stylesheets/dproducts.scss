@@ -46,7 +46,7 @@
 
 //=======================
 .row-dindex-1 {
-  background-color: #000;
+  background-color: rgba(10,25,30,1);
   position: absolute;
   z-index: -30;
 }
@@ -54,37 +54,54 @@
   letter-spacing: 3px;
   font-size: 16px;
   font-weight: 600;
-  color: #000;
+  color: rgba(10,25,30,1);
   margin-top: 30px;
   margin-bottom: -2px;
 }
 .font-dindex-1:hover {
-  color: #fff;
+  color: rgba(200,35,50,1);
 }
 .font-dindex-2 {
   color: #fff;
-  font-size: 20px;
+  font-size: 10em;
+  font-weight: 900;
+  padding: 25%;
+  margin-bottom:  -20%;
 }
 .font-dindex-2:hover {
   background: rgba(0,0,0,0);
 }
 .font-dindex-3 {
-  color: #000;
+  color: rgba(10,25,30,1);
 }
+.font-dindex-3:hover {
+  color: red;
+}
+
+
 .table-dindex-1 {
-  background: rgba(0,0,0,1);
+  background: rgba(10,25,30,1);
   position:relative;
   text-align:center;
   display: table;
+  margin: auto;
+
 }
 .table-dindex-1:hover {
   background: rgba(0,0,0,0.1);
 }
 .text-index-1 {
-  height:200px;
+  height:auto;
+
   vertical-align:middle;
   display:table-cell;
   z-index:3;
+  text-align:center;
+  margin:5px,10px;
+
+}
+.text-index-1 :hover{
+  color: rgba(0,0,0,0);
 }
 
 .bg-dindex-1 {
@@ -94,4 +111,21 @@
   width:100%;
   height:100%;
   z-index:-2;
+}
+.font-dindex-3 {
+-webkit-border-radius: 7;
+-moz-border-radius: 7;
+border-radius: 7px;
+font-family: Arial;
+color: rgba(10,25,30,1);
+font-size: 14px;
+background: rgba(10,25,30,1);
+padding: 10px 10px 10px 10px;
+text-decoration: none;
+margin-top: 1em;
+}
+
+.font-dindex-3:hover {
+background: rgba(200,35,50,1);
+text-decoration: none;
 }
