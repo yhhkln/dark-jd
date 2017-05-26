@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "users/registrations", :sessions => "users/sessions" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do
+    resources :categories
+
     resources :products do
       member do
         patch :move_up
@@ -58,6 +60,7 @@ Rails.application.routes.draw do
 
 
   namespace :dadmin do
+    resources :dcategories
     resources :dproducts
     resources :dorders do
       member do

@@ -9,11 +9,12 @@ class Dadmin::DproductsController < ApplicationController
 
 	def new
 		@dproduct = Dproduct.new
+		@dcategories = Dcategory.all.map { |c| [c.name, c.id]}
 	end
 
 	def create
 		@dproduct = Dproduct.new(product_params)
-
+		@dproduct.dcategory_id = params[:dcategory_id]
 		if @dproduct.save
 			redirect_to dadmin_dproducts_path
 		else
@@ -23,11 +24,12 @@ class Dadmin::DproductsController < ApplicationController
 
 	def edit
    	@dproduct = Dproduct.find(params[:id])
+		@dcategories = Dcategory.all.map { |c| [c.name, c.id]}
  	end
 
  	def update
    	@dproduct = Dproduct.find(params[:id])
-
+		@dproduct.dcategory_id = params[:dcategory_id]
    	if @dproduct.update(product_params)
      	redirect_to dadmin_dproducts_path
    	else

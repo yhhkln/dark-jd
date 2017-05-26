@@ -1,0 +1,2 @@
+module Dadmin::DcategoriesHelper
+end

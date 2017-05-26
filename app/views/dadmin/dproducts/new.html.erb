@@ -19,9 +19,12 @@
   </div>
 
   <div class="group">
-    <%= f.input :image, as: :file %>
+    <%= select_tag(:dcategory_id, options_for_select(@dcategories), :prompt => "类别")%>
   </div>
 
+  <div class="group">
+    <%= f.input :image, as: :file %>
+  </div>
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
