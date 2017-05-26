@@ -1,7 +1,14 @@
 class DproductsController < ApplicationController
     layout "dproduct"
     def index
-    @dproducts = Dproduct.all
+
+    if params[:dcategory].blank?
+      @dproducts = Dproduct.all
+    else
+      @dcategory_id = Dcategory.find_by(name: params[:dcategory]).id
+      @dproducts = Dproduct.where(:dcategory_id => @dcategory_id)
+    end
+
     end
     def show
     @dproduct = Dproduct.find(params[:id])
