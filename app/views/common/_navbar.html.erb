@@ -16,9 +16,6 @@
                 <li>
                   <%= link_to("Admin 选单", admin_products_path ) %>
                 </li>
-
-
-
                 <li>
                   <%= link_to("Dadmin 选单", dadmin_dproducts_path ) %>
                 </li>
@@ -33,34 +30,7 @@
             </ul>
           </div>
         <% end %>
-<!-- product 分类 -->
-        <ul class="nav navbar-nav navbar-left">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-e panded="false">分类<span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-             <% Category.all.each do |category| %>
-               <li>
-                <%= link_to(category.name, products_path(category: category.name)) %>
-              </li>
-            <% end %>
-           </ul>
-          </li>
-       </ul>
-       <!-- dproduct 分类 -->
-       <ul class="nav navbar-nav navbar-left">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-e panded="false">d分类<span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu">
-         <% Dcategory.all.each do |dcategory| %>
-           <li>
-            <%= link_to(dcategory.name, dproducts_path(dcategory: dcategory.name)) %>
-          </li>
-        <% end %>
-       </ul>
-      </li>
-   </ul>
-
-      </ul>
+      </ul>    
       <%= form_tag search_products_path , :method => :get do %><!--==搜索===-->
         <div class="input-group pull-right" id="search-id" >
           <input type="text" class="form-control" name="q" value="<%= params[:q] %>" placeholder="用你想要的底料">
