@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'dproducts#index'
+  root 'welcome#index'
 
   resources :comments
 
