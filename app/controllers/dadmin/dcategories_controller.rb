@@ -28,7 +28,7 @@ class Dadmin::DcategoriesController < ApplicationController
   def update
     @dcategory = Dcategory.find(params[:id])
     if @dcategory.update(dcategory_params)
-      redirect_to dadmin_dcategory_path
+      redirect_to dadmin_dcategories_path
     else
       render :edit
     end
