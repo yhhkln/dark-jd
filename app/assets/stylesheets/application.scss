@@ -19,6 +19,9 @@
 @import "font-awesome";
 
 //=============== 通用  ===============//
+body {
+  color: #666;
+}
 .col-centered {//格线系统居中
   float: none;
   margin: 0 auto;
