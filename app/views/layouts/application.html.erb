@@ -6,6 +6,7 @@
       <%= csrf_meta_tags %>
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
     </head>
   </head>
 
@@ -18,6 +19,23 @@
         <%= render "common/footer" %>
       </div>
     </div>
-
+    <script type="text/javascript">
+      $youziku.load("", "10242bfdd57f438da0cea8f8e9bc1e7e", "SiYuan-ExtraLight");
+      /*$youziku.load("#id1,.class1,h1", "10242bfdd57f438da0cea8f8e9bc1e7e", "SiYuan-ExtraLight");*/
+      $youziku.load("", "b9fba423daf04b19a30d6081edf38830", "Source-Han-Light");
+      /*$youziku.load("#id1,.class1,h1", "b9fba423daf04b19a30d6081edf38830", "Source-Han-Light");*/
+      $youziku.load("", "d4444823904a46389f62e529897ef016", "Source-Han-Normal");
+      /*$youziku.load("#id1,.class1,h1", "d4444823904a46389f62e529897ef016", "Source-Han-Normal");*/
+      $youziku.load("", "22690571b66a40bc94c7150142d5ec79", "SiYuanRegular");
+      /*$youziku.load("#id1,.class1,h1", "22690571b66a40bc94c7150142d5ec79", "SiYuanRegular");*/
+      $youziku.load("body", "efdd71b1dcfb4ef0802242fe94d399cf", "Source-Han-Sans-Medium");
+      /*$youziku.load("#id1,.class1,h1", "efdd71b1dcfb4ef0802242fe94d399cf", "Source-Han-Sans-Medium");*/
+      $youziku.load("", "3215d63c7ac343ee82b30e10d29421dd", "SiYuanBold");
+      /*$youziku.load("#id1,.class1,h1", "3215d63c7ac343ee82b30e10d29421dd", "SiYuanBold");*/
+      $youziku.load("", "d4afc998e6204af68d1d90fe583ed5f2", "SiYuan-Heavy");
+      /*$youziku.load("#id1,.class1,h1", "d4afc998e6204af68d1d90fe583ed5f2", "SiYuan-Heavy");*/
+      /*．．．*/
+      $youziku.draw();
+    </script>
   </body>
 </html>
