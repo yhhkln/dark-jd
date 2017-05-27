@@ -37,7 +37,10 @@ body {
     color: #666;
     transition: 0.5s;                 // 鼠标移开时 0.5秒渐变
   }
-  a:hover {
+  a:link,
+  a:hover,
+  a:active,
+  a:focus {
     color: #7f8c8d;
     transition: 0.5s;                 // 鼠标指向时 0.5面渐变
     text-decoration: none;            // 移除下划线
@@ -56,7 +59,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  margin-top: -20px;
+  margin-top: -1.7em;
   .posi-windex1 {
     padding-top: 5em;
     padding-left: 5em;
@@ -64,14 +67,15 @@ body {
 }
 .row-windex2 {
   margin-top: 80px;
-  // img {
-  //   box-shadow: 0px 1px 0.2px #999;
-  // }
   img:hover {
   opacity:0.7;
   }
 }
 
+.nav-style {
+  border: 0;
+  background-color: #fff;
+}
 
 
 //=============== Navbar ===============//
