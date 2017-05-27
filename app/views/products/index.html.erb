@@ -1,24 +1,32 @@
-<div class="img-cart-1">
-</div>
+<style>
+.row-pindex-1 {
 
-<div class="row row-pro-index-2">
+}
+.font-pindex-1 {
+  
+}
+</style>
+
+<div class="row row-pindex-1">
   <div class="col-md-8 col-centered">
-     <% @products.each do |product| %>
-       <div class="col-md-3 col-sm-3 col-xs-6 " style="text-align:center;">
-         <%= link_to product_path(product) do %>
-           <!-- <% if product.image.present? %>
-             <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-           <% else %>
-             <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-           <% end %> -->
-           <% if product.photos.present? %>
-            <%= image_tag(product.photos[0].avatar.thumb.url) %>
-            <% else %>
-              <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-            <% end %>
-         <% end %>
-         <p class="font-pro-index-1"><%= product.title %></p>
-       </div>
-     <% end %>
+    <% @products.each do |product| %>
+      <div class="col-md-3 col-sm-3 col-xs-6 " style="">
+        <%= link_to product_path(product) do %>
+          <% if product.photos.present? %>
+            <%= image_tag(product.photos[0].avatar.thumb.url, class:"thumbnail") %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+          <% end %>
+        <% end %>
+        <p class="font-pindex-1"><%= product.title %></p>
+        <div class="">
+          <% if product.quantity.present? && product.quantity > 0 %>
+            <%= link_to("加入实验室", add_to_cart_product_path(product), :method => :post) %>
+          <% else %>
+            正在积极备货中......
+          <% end %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
