@@ -24,10 +24,15 @@
 
 
 <!-- 分页导航 -->
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default col-md-8 col-centered" role="navigation" style="background-color: rgba(10,25,30,1); border:0;">
 	<div class="container-fluid">
   	<div>
-  		<ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" >
+        <a class="navbar-brand" href="/">品味实验室</a>
+        <li><a href="/dproducts">黑暗料理</a></li>
+        <li><a href="/dcarts">后厨 ( <%= current_dcart.dproducts.count %> )</a></li>
+      </ul>
+  		<ul class="nav navbar-nav navbar-right">
   			<li><a href="/dproducts?dcategory=肉">肉</a></li>
   			<li><a href="/dproducts?dcategory=菜">菜</a></li>
         <li><a href="/dproducts?dcategory=调料">调料</a></li>
