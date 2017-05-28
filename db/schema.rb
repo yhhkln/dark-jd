@@ -109,7 +109,6 @@ ActiveRecord::Schema.define(version: 20170528073102) do
     t.boolean  "is_paid",          default: false
     t.string   "payment_method"
     t.string   "aasm_state",       default: "order_placed"
-    t.string   "street"
     t.string   "province"
     t.string   "city"
     t.string   "district"
