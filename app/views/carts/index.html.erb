@@ -10,14 +10,13 @@
                       method: :delete , class: "pull-right",
                       style: "text-decoration: underline;",
                       data: { confirm: "你确定要清空整个实验室吗？"} )%>
-          <h2> 实验室呦 </h2>
+          <h2> 实验室 </h2>
         </div>
         <table class="table table-bordered">
           <thead>
 
             <tr class="cart-table-title">
               <th>商品资讯</th>
-              <th>DIY</th>
               <th>单价</th>
               <th>数量</th>
               <th>操作选项</th>
@@ -38,20 +37,6 @@
                     <% end %>
                   <% end %>
                   <%= link_to(cart_item.product.title, product_path(cart_item.product),style:"font-weight:500") %>
-                </td>
-
-                <td>
-                  <!-- 乱搞的开始 -->
-                  <%= simple_form_for cart_item.product do |f| %>
-                    <%= f.input :salt, :label => "盐(g)" %>
-                    <%= f.input :sugar, :label => "糖(g)" %>
-                    <%= f.input :papper, :label => "胡椒粉(g)" %>
-                    <%= f.input :sauces, :label => "酱油(ml)" %>
-                    <%= f.input :vinegar, :label => "醋(ml)" %>
-                    <%= f.input :oil, :label => "油(ml)" %>
-                    <%= f.submit "调好味道了", data: { disable_with: "Submitting..." } %>
-                  <% end %>
-                  <!-- 乱搞的结束 -->
                 </td>
                 <td>
                   <%= cart_item.product.price %>

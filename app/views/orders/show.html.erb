@@ -41,7 +41,9 @@
                 </tr>
                 <tr>
                   <td>
-                    <%= @order.billing_name %> - <%= @order.billing_address %>
+                    姓名:<%= @order.billing_name %>
+                    <br>
+                    电话:<%= @order.billing_address %>
                   </td>
                 </tr>
                 <tr>
@@ -51,7 +53,14 @@
                 </tr>
                 <tr>
                   <td>
-                    <%= @order.shipping_name %> - <%= @order.shipping_address %>
+                    姓名:<%= @order.shipping_name %>
+                    <br>
+                    电话:<%= @order.shipping_address %>
+                    <br>
+                    详细地址:
+                    <%= ChinaCity.get(@order.province) %>
+                    <%= ChinaCity.get(@order.city) %>
+                    <%= ChinaCity.get(@order.district) %>
                   </td>
                 </tr>
               </tbody>

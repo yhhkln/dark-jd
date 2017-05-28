@@ -50,6 +50,8 @@ gem 'figaro'
 gem "intercom-rails"
 gem 'rollbar'
 
+gem 'china_city'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console。binding.pry
   gem 'pry'

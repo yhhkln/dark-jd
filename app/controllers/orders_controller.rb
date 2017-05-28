@@ -47,11 +47,11 @@ class OrdersController < ApplicationController
     OrderMailer.apply_cancel(@order).deliver!
     flash[:notice] = "已提交申请"
     redirect_to :back
-  end  
+  end
 
   private
 
   def order_params
-    params.require(:order).permit(:billing_name, :billing_address, :shipping_name, :shipping_address)
+    params.require(:order).permit(:province, :city, :district, :street, :billing_name, :billing_address, :shipping_name, :shipping_address)
   end
 end
