@@ -30,8 +30,11 @@ body {
     float: none;
     margin: 0 auto;
   }
-  .text-centered {                    //文字居中
+  .text-center {                    //文字居中
     text-align: center;
+  }
+  .b0 {
+    border: 0;
   }
   a {
     color: #666;
@@ -81,7 +84,14 @@ body {
 .row-windex2 {
   margin-top: 80px;
   img:hover {
-  opacity:0.7;
+  opacity:0.8;
+  }
+}
+.row-windex3 {
+  margin-top: 80px;
+
+  img:hover {
+  opacity:0.8;
   }
 }
 //**购物流程**
