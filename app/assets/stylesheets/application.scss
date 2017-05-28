@@ -58,7 +58,8 @@ body {
 //=============== Navbar ===============//
 .nav-style {
   border: 0;
-  background-color: #fff;
+  background-color: rgba(245,245,245,0.9)
+  ;
 }
 .input-group {//搜索
   width:200px;
@@ -77,8 +78,8 @@ body {
   background-repeat: no-repeat;
   margin-top: -1.7em;
   .posi-windex1 {
-    padding-top: 5em;
-    padding-left: 5em;
+    padding-top: 10%;
+    padding-left: 10%;
   }
 }
 .row-windex2 {
@@ -313,11 +314,12 @@ body {
   font-size: 12px;
   font-weight: 400;
   color: #999999;
-  margin-left: 5%;
 }
 .panel-log-1 {
   box-shadow: 0px 15px 100px 5px #888888;
   border-radius: 10px;
+  margin-top: 100px;
+  width:220px;
 }
 .panel-head-1 {
   border-radius: 10px 10px 0px 0px;
