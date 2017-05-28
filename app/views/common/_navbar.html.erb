@@ -3,21 +3,21 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="/">品味实验室</a>
     </div>
-
-
 		<ul class="nav navbar-nav">
-
-			 <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-e panded="false">原材料<span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-				 <% Category.all.each do |category| %>
-					 <li>
-						<%= link_to(category.name, products_path(category: category.name)) %>
-					</li>
-				<% end %>
-			 </ul>
+			<li class="dropdown">
+					<a href="/products" class="dropdown-toggle" data-toggle="dropdown">
+							原材料 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/products">全</a></li>
+						<li class="divider"></li>
+						<li><a href="/products?category=肉">肉</a></li>
+						<li><a href="/products?category=菜">菜</a></li>
+						<li><a href="/products?category=料">料</a></li>
+						<li class="divider"></li>
+						<li><a href="/products?category=厨">厨</a></li>
+					</ul>
 			</li>
-
 			<li><a href="/carts">实验室 ( <%= current_cart.products.count %> )</a></li>
 			<li><a href="/dproducts">黑暗料理</a></li>
 		</ul>
