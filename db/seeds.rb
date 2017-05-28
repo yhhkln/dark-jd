@@ -26,47 +26,6 @@ Category.create(name: "厨")
 Category.create(name: "肉")
 Category.create(name: "菜")
 Category.create(name: "料")
-Product.create!(title: "三星主厨",
-price: 499,
-quantity: 50,
-# category_id: 1,
-)
-puts "11"
-Product.create!(title: "两星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "12"
-Product.create!(title: "两星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "13"
-Product.create!(title: "两星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "14"
-Product.create!(title: "两星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "15"
-Product.create!(title: "一星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "16"
-Product.create!(title: "一星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "17"
-Product.create!(title: "一星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "18"
 Product.create!(title: "猪瘦肉片500g",
 price: rand(25..30),
 quantity: 50,
@@ -148,42 +107,83 @@ quantity: 50,
 )
 puts "38"
 Product.create!(title: "盐",
-price: 0.1,
+price: 1,
 quantity: 50,
 )
 puts "41"
 Product.create!(title: "胡椒粉",
-price: 0.1,
+price: 1,
 quantity: 50,
 )
 puts "42"
 Product.create!(title: "孜然",
-price: 0.1,
+price: 1,
 quantity: 50,
 )
 puts "43"
 Product.create!(title: "肉桂",
-price: 0.1,
+price: 1,
 quantity: 50,
 )
 puts "44"
 Product.create!(title: "辣椒粉",
-price: 0.1,
+price: 1,
 quantity: 50,
 )
 puts "45"
 Product.create!(title: "黑胡椒",
-price: 0.1,
+price: 1,
 quantity: 50,
 )
 puts "46"
 Product.create!(title: "混合香料1",
-price: 0.1,
+price: 1,
 quantity: 50,
 )
 puts "47"
 Product.create!(title: "混合香料2",
-price: 0.1,
+price: 1,
 quantity: 50,
 )
 puts "48"
+Product.create!(title: "三星主厨",
+price: 499,
+quantity: 50,
+# category_id: 1,
+)
+puts "11"
+Product.create!(title: "两星主厨",
+price: rand(90..100)*10,
+quantity: 50,
+)
+puts "12"
+Product.create!(title: "两星主厨",
+price: rand(90..100)*10,
+quantity: 50,
+ )
+puts "13"
+Product.create!(title: "两星主厨",
+price: rand(90..100)*10,
+quantity: 50,
+ )
+puts "14"
+Product.create!(title: "两星主厨",
+price: rand(90..100)*10,
+quantity: 50,
+ )
+puts "15"
+Product.create!(title: "一星主厨",
+price: rand(90..100)*10,
+quantity: 50,
+ )
+puts "16"
+Product.create!(title: "一星主厨",
+price: rand(90..100)*10,
+quantity: 50,
+ )
+puts "17"
+Product.create!(title: "一星主厨",
+price: rand(90..100)*10,
+quantity: 50,
+ )
+puts "18"
