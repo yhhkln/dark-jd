@@ -52,7 +52,20 @@ body {
   }
 }
 
-//========== Welcome Index ==========//
+//=============== Navbar ===============//
+.nav-style {
+  border: 0;
+  background-color: #fff;
+}
+.input-group {//搜索
+  width:200px;
+  margin-top: -15px;
+  margin-right: 20px;
+}
+
+
+//============ Welcome_Index ============//
+//**大图**
 .row-windex1 {
   background-image: url(http://ww2.sinaimg.cn/large/006tNc79gy1fg0frtm0taj31bw0ice0e.jpg);
   height: 660px;
@@ -71,104 +84,6 @@ body {
   opacity:0.7;
   }
 }
-
-.nav-style {
-  border: 0;
-  background-color: #fff;
-}
-
-
-//=============== Navbar ===============//
-//**第一行：红色导航**
-.row-nav-1 {
-  background-color: #D81315;
-  margin-right: -20px;
-  height: 40px;
-}
-.posi-nav-1 {
-  margin-right: 15px;
-}
-#font-nav-1 {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 10px;
-}
-.input-group {//搜索
-  width:200px;
-  margin-top: -15px;
-  margin-right: 20px;
-}
-//**第二行：logo、按钮**
-.row-nav-2 {
-  background-color:#fff;
-  margin-top:-15px;
-  margin-right: -20px;
-  text-align:center;
-}
-.img-nav-1 {
-  width:350px;
-  padding:10px 0px;
-  margin-right:100px;
-}
-#btn-nav-2 {
-  -webkit-border-radius: 4;
-  -moz-border-radius: 4;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 2px 1px #000000;
-  -moz-box-shadow: 0px 2px 1px #000000;
-  box-shadow: 0px 2px 1px #000000;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 18px;
-  background: #D81315;
-  padding: 20px 20px 18px 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-#btn-nav-2:hover {
-  background: #3D3D3D;
-  text-decoration: none;
-}
-#btn-nav-3 {
-  -webkit-border-radius: 4;
-  -moz-border-radius: 4;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 2px 1px #000000;
-  -moz-box-shadow: 0px 2px 1px #000000;
-  box-shadow: 0px 2px 1px #000000;
-  font-family: Arial;
-  color: #000000;
-  font-size: 18px;
-  background: #000000;
-  padding: 20px 20px 18px 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-#btn-nav-3:hover {
-  background: #D81315;
-  text-decoration: none;
-  color: #fff;
-}
-//**navbar置顶**
-.navbar-fixed-top {
-    top: 0px;
-    margin-bottom: 200px;
-}
-.navbar-fixed-top, .navbar-fixed-bottom {
-    position: fixed;
-    top: 0px;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
-
-//=============== Welcome_Box ===============//
-//**大图**
-.font-bg-1 {//透明条
-  top: 43%!important;
-}
-//=============== Welcome_Index ===============//
 //**购物流程**
 .font-h-1 {
   text-align: center;
