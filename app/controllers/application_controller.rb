@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
   private
 
   def find_dcart
-    dcart = Dcart.find_by(id: session[:cart_id])
+    dcart = Dcart.find_by(id: session[:dcart_id])
     if dcart.blank?
       dcart = Dcart.create
     end

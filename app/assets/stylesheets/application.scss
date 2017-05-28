@@ -19,102 +19,71 @@
 @import "font-awesome";
 
 //=============== 通用  ===============//
-.col-centered {//格线系统居中
-  float: none;
-  margin: 0 auto;
+body {
+  color: #666;
+  position: relative;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  .col-centered {                     //格线系统居中
+    float: none;
+    margin: 0 auto;
+  }
+  .text-centered {                    //文字居中
+    text-align: center;
+  }
+  a {
+    color: #666;
+    transition: 0.5s;                 // 鼠标移开时 0.5秒渐变
+  }
+  a:link,
+  a:hover,
+  a:active,
+  a:focus {
+    color: #7f8c8d;
+    transition: 0.5s;                 // 鼠标指向时 0.5面渐变
+    text-decoration: none;            // 移除下划线
+  }
+  h1:hover,
+  h2:hover,
+  h3:hover{
+    opacity: 0.8;
+  }
 }
 
 //=============== Navbar ===============//
-//**第一行：红色导航**
-.row-nav-1 {
-  background-color: #D81315;
-  margin-right: -20px;
-  height: 40px;
-}
-.posi-nav-1 {
-  margin-right: 15px;
-}
-#font-nav-1 {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 10px;
+.nav-style {
+  border: 0;
+  background-color: #fff;
 }
 .input-group {//搜索
   width:200px;
   margin-top: -15px;
   margin-right: 20px;
 }
-//**第二行：logo、按钮**
-.row-nav-2 {
-  background-color:#fff;
-  margin-top:-15px;
-  margin-right: -20px;
-  text-align:center;
-}
-.img-nav-1 {
-  width:350px;
-  padding:10px 0px;
-  margin-right:100px;
-}
-#btn-nav-2 {
-  -webkit-border-radius: 4;
-  -moz-border-radius: 4;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 2px 1px #000000;
-  -moz-box-shadow: 0px 2px 1px #000000;
-  box-shadow: 0px 2px 1px #000000;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 18px;
-  background: #D81315;
-  padding: 20px 20px 18px 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-#btn-nav-2:hover {
-  background: #3D3D3D;
-  text-decoration: none;
-}
-#btn-nav-3 {
-  -webkit-border-radius: 4;
-  -moz-border-radius: 4;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 2px 1px #000000;
-  -moz-box-shadow: 0px 2px 1px #000000;
-  box-shadow: 0px 2px 1px #000000;
-  font-family: Arial;
-  color: #000000;
-  font-size: 18px;
-  background: #000000;
-  padding: 20px 20px 18px 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-#btn-nav-3:hover {
-  background: #D81315;
-  text-decoration: none;
-  color: #fff;
-}
-//**navbar置顶**
-.navbar-fixed-top {
-    top: 0px;
-    margin-bottom: 200px;
-}
-.navbar-fixed-top, .navbar-fixed-bottom {
-    position: fixed;
-    top: 0px;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
 
-//=============== Welcome_Box ===============//
+
+//============ Welcome_Index ============//
 //**大图**
-.font-bg-1 {//透明条
-  top: 43%!important;
+.row-windex1 {
+  background-image: url(http://ww2.sinaimg.cn/large/006tNc79gy1fg0frtm0taj31bw0ice0e.jpg);
+  height: 660px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: -1.7em;
+  .posi-windex1 {
+    padding-top: 5em;
+    padding-left: 5em;
+  }
 }
-//=============== Welcome_Index ===============//
+.row-windex2 {
+  margin-top: 80px;
+  img:hover {
+  opacity:0.7;
+  }
+}
 //**购物流程**
 .font-h-1 {
   text-align: center;
@@ -363,6 +332,3 @@
   background-color: #fff;
   opacity: 0.8;
 }
-
-
-// 首页轮播图字体
