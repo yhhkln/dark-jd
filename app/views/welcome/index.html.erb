@@ -3,31 +3,27 @@
     <h1>DIY你的味道</h1>
     <h3>只有你想不到的搭配，没有我做不出的菜肴</h3>
     <span>
-      <a href = "JavaScript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" class="btn btn-default btn-lg" role="button">如何使用</a>
+      <a href = "JavaScript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" class="btn btn-default btn-lg" role="button" style="margin-top:10px;">如何使用</a>
     </span>
-    <span><a href="/products" class="btn btn-default btn-lg" role="button">立即搭配</a></span>
+    <!-- <span><a href="/products" class="btn btn-default btn-lg" role="button">立即搭配</a></span> -->
   </div>
 </div>
-
 
 <div id="light" class="white_content">
   <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" class="col-md-12">
     <i class="fa fa-times-circle-o i-windex-1" aria-hidden="true"></i>
   </a>
-  <div class="col-md-4">
+  <div class="col-md-4 text-center">
     <img src='<%= image_url 'how1.png' %>' alt="">
-    <h3>预定厨师</h3>
-    <h5>在品味实验室预订厨师、安全支付。随时随地查看厨师及服务进程。</h5>
+    <h3 class="font-openbox">自定菜品<br/>选择原料调味</h3>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 text-center">
     <img src='<%= image_url 'how2.png' %>' alt="">
-    <h3>代买食材</h3>
-    <h5>没时间买菜？厨师代买，一切都能通过爱大厨值得信赖的服务完成。</h5>
+    <h3 class="font-openbox">预订厨师<br/>上门协助完成</h3>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 text-center">
     <img src='<%= image_url 'how3.png' %>' alt="">
-    <h3>上门服务</h3>
-    <h5>星级专业厨师亲自上门服务，将酒店级别服务带到身边。</h5>
+    <h3 class="font-openbox">完成味道<br/>静享欢乐时光</h3>
   </div>
 </div>
 <div id="fade" class="black_overlay"></div>

@@ -41,7 +41,7 @@
         <div class="pull-left">
           <% if @product.quantity.present? && @product.quantity > 0 %>
             <%= link_to("加入实验室", add_to_cart_product_path(@product), :method => :post,
-            id: "btn-primary-1") %>
+            class: "btn btn-default btn-lg") %>
           <% else %>
             正在积极备货中......
           <% end %>

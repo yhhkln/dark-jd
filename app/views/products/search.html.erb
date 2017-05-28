@@ -19,7 +19,7 @@
                 <span class="pr1">售价</span>
                 <span class="pr2">￥ <%= product.price %> </span>
               <% if product.quantity.present? && product.quantity > 0 %>
-                <%= link_to(add_to_cart_product_path(product), :method => :post, id: "btn-primary-3" ) do%>
+                <%= link_to(add_to_cart_product_path(product), :method => :post, class: "btn btn-default btn-lg" ) do%>
                 加入实验室
               <% end %>
               <% else %>
