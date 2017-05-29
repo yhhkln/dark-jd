@@ -64,6 +64,9 @@
                   <%= f.select :district,  ChinaCity.list(f.object.city).presence     || [["--地区--", 230903]],    {}, class: "city-select col-lg-3" %>
                 </div>
               </div>
+              <div class="form-group col-lg-6">
+                <%= f.input :address, label: "详细地址"  %>
+              </div>
                <div class="checkout">
                  <%= f.submit "生成订单", class: "btn btn-lg btn-danger pull-right",
                               data: { disable_with: "Submitting..." } %>
