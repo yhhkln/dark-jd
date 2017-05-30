@@ -1,86 +1,85 @@
-<%= render "common/flashes" %>
-<div class="img-bg-dindex-1">
-  <div class="row">
-    <div class="pic-dindex-1">
-      <a href="#" style="position:absolute;">
-        <img src='<%= image_url 'D1.png' %>'>
-      </a>
-      <div class="clearfix"></div>
-    </div>
-    <div class="pic-dindex-2">
-      <a href="/products" style="position:absolute;">
-        <img src='<%= image_url 'D2.png' %>'>
-      </a>
-    </div>
-    <div class="pic-dindex-3">
-      <!-- <a href="/" style="position:absolute;"> -->
-      <%= link_to dcarts_path do  %>
-        <img src='<%= image_url 'D3.png' %>'>
-      <% end %>
-      <!-- </a> -->
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootstrap 实例 - 轮播（Carousel）插件方法</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style media="screen">
 
+</style>
+</head>
+<body>
 
-<!-- 分页导航 -->
-<nav class="navbar navbar-default col-md-8 col-centered" role="navigation" style="background-color: rgba(10,25,30,1); border:0;">
-	<div class="container-fluid">
-  	<div>
-      <ul class="nav navbar-nav" >
-        <a class="navbar-brand" href="/">品味实验室</a>
-        <li><a href="/dproducts">黑暗料理</a></li>
-        <li><a href="/dcarts">后厨 ( <%= current_dcart.dproducts.count %> )</a></li>
-      </ul>
-  		<ul class="nav navbar-nav navbar-right">
-  			<li><a href="/dproducts?dcategory=肉">肉</a></li>
-  			<li><a href="/dproducts?dcategory=菜">菜</a></li>
-        <li><a href="/dproducts?dcategory=调料">调料</a></li>
-        <li><a href="/dproducts?dcategory=厨师">厨师</a></li>
-  		</ul>
-  	</div>
+<div id="myCarousel" class="carousel slide">
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner">
+		<div class="item active">
+		    <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fg3q1j3od4j30zk0k0noz.jpg" alt="First slide" class="center-block" style="width:80%;">
+		</div>
+		<div class="item">
+		    <img src="https://ws4.sinaimg.cn/large/006tNc79gy1fg3q1kw8y4j30zk0k0e81.jpg" alt="Second slide" class="center-block" style="width:80%;">
+		</div>
+		<div class="item">
+		    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3q1lidm8j30zk0k01as.jpg" alt="Third slide" class="center-block" style="width:80%;">
+		</div>
 	</div>
-</nav>
-<!-- dproduct 分类 -->
-<!-- <ul class="nav navbar-nav navbar-left">
-  <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-e panded="false">d分类<span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu">
-      <% Dcategory.all.each do |dcategory| %>
-        <li>
-          <%= link_to(dcategory.name, dproducts_path(dcategory: dcategory.name)) %>
-        </li>
-      <% end %>
-    </ul>
-  </li>
-</ul> -->
-
-
-
-<div class="col-md-8 col-centered">
-  <% @dproducts.each do |dproduct| %>
-    <div class="col-md-3 col-sm-3 col-xs-6 table-dindex-1">
-
-      <div class="">
-        <div class="text-index-1">
-          <span class="font-dindex-2">&nbsp;</span>
-        </div>
-        <% if dproduct.image.present? %>
-          <%= image_tag(dproduct.image.thumb.url, class: "bg-dindex-1") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-        <% end %>
-      </div>
-
-      <h4 class="font-dindex-1"><%= dproduct.title %></h4>
-      <% if dproduct.quantity.present? && dproduct.quantity > 0 %>
-        <%= link_to(add_to_dcart_dproduct_path(dproduct), :method => :post, :class => "btn add2cart font-dindex-3") do %>
-          加入后厨
-        <% end %>
-      <% else %>
-          都在碗里了
-      <% end %>
-
-    </div>
-  <% end %>
+	<!-- 轮播（Carousel）导航 -->
+	<!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+	<a class="carousel-control right" href="#myCarousel" data-slide="next">›</a> -->
 </div>
+
+<!-- 控制按钮 -->
+
+<div style="text-align:center; margin-top:10px;">
+  <span class="slide-one">
+    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3pzxlyksj302y01omxf.jpg">&nbsp;
+  </span>
+  <span class="slide-two">
+    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3pzxqjhsj302y01odg2.jpg">&nbsp;
+  </span>
+  <span class="slide-three">
+    <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fg3pzyg3jnj302y01o0sw.jpg">&nbsp;
+  </span>
+</div>
+
+<script>
+	$(function(){
+		// 初始化轮播
+		$(".start-slide").click(function(){
+			$("#myCarousel").carousel('cycle');
+		});
+		// 停止轮播
+		$(".pause-slide").click(function(){
+			$("#myCarousel").carousel('pause');
+		});
+		// 循环轮播到上一个项目
+		$(".prev-slide").click(function(){
+			$("#myCarousel").carousel('prev');
+		});
+		// 循环轮播到下一个项目
+		$(".next-slide").click(function(){
+			$("#myCarousel").carousel('next');
+		});
+		// 循环轮播到某个特定的帧
+		$(".slide-one").click(function(){
+			$("#myCarousel").carousel(0);
+		});
+		$(".slide-two").click(function(){
+			$("#myCarousel").carousel(1);
+		});
+		$(".slide-three").click(function(){
+			$("#myCarousel").carousel(2);
+		});
+	});
+</script>
+</body>
+</html>
