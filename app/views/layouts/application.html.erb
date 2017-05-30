@@ -13,7 +13,9 @@
     <div class="container-fluid">
       <div class="row">
         <%= render "common/navbar" %>
-        <%= render "common/flashes" %>
+        <div class="" style="position:absolute; top:55px; left:0; width:300px;">
+          <%= render "common/flashes" %>
+        </div>
         <%= yield %>
         <%= render "common/footer"%>
       </div>

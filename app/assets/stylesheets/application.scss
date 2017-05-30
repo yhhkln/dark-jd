@@ -327,10 +327,6 @@ body {
   background-image: url(http://ww2.sinaimg.cn/large/006tNbRwgy1fft4ktfnn4j305l055dg6.jpg);
   background-repeat: repeat;
 }
-.posi-log-1 {
-  width:450px;
-  margin-top:10%;
-}
 .font-log-1 {
   font-size: 12px;
   font-weight: 400;
@@ -339,11 +335,10 @@ body {
 .panel-log-1 {
   box-shadow: 0px 15px 100px 5px #888888;
   border-radius: 10px;
-  margin-top: 100px;
-  width:220px;
 }
 .panel-head-1 {
   border-radius: 10px 10px 0px 0px;
+  padding: 60px 0px 30px 0px;
 }
 .panel-body-1 {
   padding: 10% 10% 10% 10%;
@@ -351,16 +346,9 @@ body {
   opacity: 0.8;
   border-radius: 0px 0px 10px 10px;
 }
-.img-log-1 {
-  padding:30px 0px 40px 0px;
-}
 //=============== 登录页 Devise_Sessions ===============//
-.img-log-2 {
-  padding:60px 0px 50px 0px;
-}
 .panel-log-2 {
   text-align:center;
-  // margin-bottom: 1%;
   padding: 10% 10% 10% 10%;
   background-color: #fff;
   opacity: 0.8;
