@@ -8,37 +8,48 @@
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body {
-	color: #185630;
 }
 .hr1 {
 	background-color: #185630;
 	height: 0.1em;
-	margin-top: 5em;
+	margin-top: 6em;
 }
 .font-drpo1 {
+	color: #185630;
 	font-size:4.5em;
 	font-weight: 300;
 	letter-spacing: 0.2em;
-}
-.col-md-8 .font-drpo1 span {
-	font-size:2.5em;
 }
 .font-drpo1:hover {
 	color: #000;
 	font-size:4.53em;
 	transition: 0.5s;
 }
+.nav-dpro1 {
+	background-color: #fff;
+	border: none;
+	color: #185630;
+	font-size: 1.2em;
+}
+.nav-dpro1 .navbar-nav>li>a {
+  color: #185630;
+}
 </style>
 </head>
 <body>
 <div class="col-md-8 col-centered">
-	<p class="font-drpo1">品味实验室</p>
-	<span>首页</span>
-	<span>肉</span>
-	<span>菜</span>
-	<span>厨</span>
-	<span>料</span>
+	<a href="/"><p class="font-drpo1">品味实验室</p></a>
 </div>
+
+<nav class="navbar navbar-default col-md-8 col-centered nav-dpro1">
+	<ul class="nav navbar-nav">
+		<li><a href="/dproducts?dcategory=肉">肉</a></li>
+		<li><a href="/dproducts?dcategory=菜">菜</a></li>
+    <li><a href="/dproducts?dcategory=调料">料</a></li>
+    <li><a href="/dproducts?dcategory=厨师">厨</a></li>
+		<li><a href="/dcarts">后厨&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+	</ul>
+</nav>
 
 
 <div id="myCarousel" class="carousel slide">
@@ -118,6 +129,31 @@ body {
 <div class="col-md-10 col-centered">
 	<div class="hr1"></div>
 </div>
+
+
+<div class="col-md-10 col-centered" style="margin-top:6.2em;">
+  <% @dproducts.each do |dproduct| %>
+		<div class="col-xs-6 col-md-3" style="text-align:center; margin-bottom:6.2em;">
+      <% if dproduct.image.present? %>
+        <%= image_tag(dproduct.image.thumb.url, class: "") %>
+      <% else %>
+        <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+      <% end %>
+
+      <h4><%= dproduct.title %></h4>
+      <% if dproduct.quantity.present? && dproduct.quantity > 0 %>
+        <%= link_to(add_to_dcart_dproduct_path(dproduct), :method => :post, :class => "btn btn-default") do %>
+          加入后厨
+        <% end %>
+      <% else %>
+          都在碗里了
+      <% end %>
+		</div>
+  <% end %>
+</div>
+
+
+
 
 <script>
 	$(function(){
