@@ -34,6 +34,11 @@ body {
 .nav-dpro1 .navbar-nav>li>a {
   color: #185630;
 }
+.carousel-inner > .item {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  -o-transition: -o-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
 </style>
 </head>
 <body>
@@ -104,28 +109,28 @@ body {
 
 <div style="text-align:center; margin-top:10px;">
   <span class="slide-one">
-    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3rh4zbfnj3028019dfx.jpg">&nbsp;
+    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg4j2n7vjrj302q01j0sx.jpg">&nbsp;
   </span>
   <span class="slide-two">
-    <img src="https://ws4.sinaimg.cn/large/006tNc79gy1fg3rh7p4ffj3028019mx8.jpg">&nbsp;
+    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg4j2n5csij302q01jwen.jpg">&nbsp;
   </span>
   <span class="slide-three">
-    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3rjqvndcj3028019aa3.jpg">&nbsp;
+    <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fg4j3gxzaoj302q01j74e.jpg">&nbsp;
   </span>
 	<span class="slide-four">
-		<img src="https://ws2.sinaimg.cn/large/006tNc79gy1fg3rjsdk2lj3028019dfx.jpg">&nbsp;
+		<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg4j3gtbbhj302q01j3yp.jpg">&nbsp;
 	</span>
 	<span class="slide-five">
-		<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg3rhn4obfj30280190st.jpg">&nbsp;
+		<img src="https://ws4.sinaimg.cn/large/006tNc79gy1fg4j3ss0d4j302q01jaa7.jpg">&nbsp;
 	</span>
 	<span class="slide-six">
-		<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg3rhnzv3gj30280190ss.jpg">&nbsp;
+		<img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg4j3t0lhzj302q01jjrk.jpg">&nbsp;
 	</span>
 	<span class="slide-seven">
-		<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg3ri0yjtfj3028019q30.jpg">&nbsp;
+		<img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg4j456huvj302q01jwen.jpg">&nbsp;
 	</span>
 	<span class="slide-eight">
-		<img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3ri2clnlj3028019jrf.jpg">&nbsp;
+		<img src="https://ws4.sinaimg.cn/large/006tNc79gy1fg4j454s8ej302q01jaa6.jpg">&nbsp;
 	</span>
 </div>
 
@@ -154,7 +159,6 @@ body {
 		</div>
   <% end %>
 </div>
-
 
 
 
@@ -200,6 +204,9 @@ body {
 		});
 		$(".slide-eight").click(function(){
 			$("#myCarousel").carousel(7);
+		});
+		$('.carousel').carousel({
+				interval: 4000
 		});
 	});
 </script>
