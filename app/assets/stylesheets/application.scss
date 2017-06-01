@@ -80,8 +80,10 @@ body {
   z-index: -1;
   bottom: 0;
   width: 100%;
-  background-image: url(https://ws3.sinaimg.cn/large/006tKfTcgy1fg5tylae2dj31kw0o84p6.jpg);
+  background-image: url(http://teahouse.themerex.net/wp-content/uploads/2016/11/footer_bg.jpg?id=651);
   padding: 220px 0px;
+  color: #fff;
+  font-size: 1.2em;
 }
 
 
@@ -141,6 +143,11 @@ body {
 }
 .row-windex2 {
   margin-top: 80px;
+  img:hover {
+  opacity:0.8;
+  }
+}
+.row-22 a {
   img:hover {
   opacity:0.8;
   }
