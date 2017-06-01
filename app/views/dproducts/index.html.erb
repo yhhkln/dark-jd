@@ -34,6 +34,11 @@ body {
 .nav-dpro1 .navbar-nav>li>a {
   color: #185630;
 }
+.carousel-inner > .item {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  -o-transition: -o-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
 </style>
 </head>
 <body>
@@ -42,10 +47,10 @@ body {
 </div>
 
 <nav class="navbar navbar-default col-md-8 col-centered nav-dpro1">
-	<ul class="nav navbar-nav">
+	<ul class="nav navbar-nav navbar-left">
 		<li><a href="/">品味实验室</a></li>
 	</ul>
-	<ul class="nav navbar-nav pull-right">
+	<ul class="nav navbar-nav navbar-right">
 		<li><a href="/dproducts?dcategory=肉">肉</a></li>
 		<li><a href="/dproducts?dcategory=菜">菜</a></li>
     <li><a href="/dproducts?dcategory=调料">料</a></li>
@@ -104,28 +109,28 @@ body {
 
 <div style="text-align:center; margin-top:10px;">
   <span class="slide-one">
-    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3rh4zbfnj3028019dfx.jpg">&nbsp;
+    <img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg4k4xmot1j302h01e3yn.jpg">&nbsp;
   </span>
   <span class="slide-two">
-    <img src="https://ws4.sinaimg.cn/large/006tNc79gy1fg3rh7p4ffj3028019mx8.jpg">&nbsp;
+    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg4k4xi37kj302h01e3ym.jpg">&nbsp;
   </span>
   <span class="slide-three">
-    <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3rjqvndcj3028019aa3.jpg">&nbsp;
+    <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fg4k4xdy7ij302h01emx8.jpg">&nbsp;
   </span>
 	<span class="slide-four">
-		<img src="https://ws2.sinaimg.cn/large/006tNc79gy1fg3rjsdk2lj3028019dfx.jpg">&nbsp;
+		<img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg4k4x4bitj302h01e0sv.jpg">&nbsp;
 	</span>
 	<span class="slide-five">
-		<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg3rhn4obfj30280190st.jpg">&nbsp;
+		<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg4k4x0rhtj302h01emxa.jpg">&nbsp;
 	</span>
 	<span class="slide-six">
-		<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg3rhnzv3gj30280190ss.jpg">&nbsp;
+		<img src="https://ws2.sinaimg.cn/large/006tNc79gy1fg4k4wwq3jj302h01ejrh.jpg">&nbsp;
 	</span>
 	<span class="slide-seven">
-		<img src="https://ws1.sinaimg.cn/large/006tNc79gy1fg3ri0yjtfj3028019q30.jpg">&nbsp;
+		<img src="https://ws4.sinaimg.cn/large/006tNc79gy1fg4k4wrf50j302h01e3ym.jpg">&nbsp;
 	</span>
 	<span class="slide-eight">
-		<img src="https://ws3.sinaimg.cn/large/006tNc79gy1fg3ri2clnlj3028019jrf.jpg">&nbsp;
+		<img src="https://ws2.sinaimg.cn/large/006tNc79gy1fg4k4wmjsgj302h01et8s.jpg">&nbsp;
 	</span>
 </div>
 
@@ -154,7 +159,6 @@ body {
 		</div>
   <% end %>
 </div>
-
 
 
 
@@ -200,6 +204,9 @@ body {
 		});
 		$(".slide-eight").click(function(){
 			$("#myCarousel").carousel(7);
+		});
+		$('.carousel').carousel({
+				interval: 4000
 		});
 	});
 </script>
