@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<style media="screen">
+
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="" style="position:absolute; top:1em; left:0; width:250px;">
+        <%= render "common/flashes" %>
+      </div>
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>
