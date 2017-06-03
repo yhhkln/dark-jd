@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount ChinaCity::Engine => '/china_city'
 
   root 'welcome#index'
+  get 'party/index'
 
   resources :comments
 
