@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170605141940) do
+ActiveRecord::Schema.define(version: 20170605152321) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -94,8 +94,6 @@ ActiveRecord::Schema.define(version: 20170605141940) do
     t.datetime "updated_at",   null: false
     t.string   "image"
     t.integer  "dcategory_id"
-    t.string   "cp_lng"
-    t.string   "cp_lat"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -115,7 +113,7 @@ ActiveRecord::Schema.define(version: 20170605141940) do
     t.string   "city"
     t.string   "district"
     t.string   "address"
-    t.         "data"
+    t.         "date"
     t.index ["aasm_state"], name: "index_orders_on_aasm_state"
   end
 
