@@ -54,6 +54,8 @@ GEM
       railties
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap-datepicker-rails (1.6.4.1)
+      railties (>= 3.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -251,6 +253,7 @@ DEPENDENCIES
   aasm
   acts_as_list
   awesome_rails_console
+  bootstrap-datepicker-rails
   bootstrap-sass
   carrierwave
   carrierwave-qiniu

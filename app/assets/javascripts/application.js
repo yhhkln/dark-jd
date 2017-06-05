@@ -19,4 +19,6 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require bootstrap-sprockets
+//= require bootstrap-datepicker/core
+
 //= require_tree .
