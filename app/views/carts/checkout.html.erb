@@ -67,6 +67,12 @@
               <div class="form-group col-lg-6">
                 <%= f.input :address, label: "详细地址"  %>
               </div>
+
+              <div class="form-group col-lg-6">
+                <%= f.label :用餐时间 %>
+                <%= f.text_field :data, :class => "form-control" %>
+              </div>
+
                <div class="checkout">
                  <%= f.submit "生成订单", class: "btn btn-lg btn-default pull-right",
                               data: { disable_with: "Submitting..." } %>
@@ -79,3 +85,7 @@
     </div>
   </div>
 </div>
+
+<script>
+  $("#order_data").datepicker({ format: "yyyy-mm-dd" });
+</script>

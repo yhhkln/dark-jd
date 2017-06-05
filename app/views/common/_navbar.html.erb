@@ -41,10 +41,10 @@
 							<li>
 								<%= link_to("d订单列表", account_dorders_path ) %>
 							</li>
-							<li>
-								<%= link_to("我的订单", account_orders_path ) %>
-							</li>
 						<% end %>
+						<li>
+							<%= link_to("我的订单", account_orders_path ) %>
+						</li>
 						<li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
 					</ul>
 				</div>
