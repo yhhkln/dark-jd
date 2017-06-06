@@ -16,83 +16,55 @@ $(function(){
 	});
 });
 </script>
-<%= render "common/flashes" %>
-<div class="img-bg-dindex-1">
-  <div class="row">
-    <div class="pic-dindex-1">
-      <a href="#" style="position:absolute;">
-        <img src='<%= image_url 'D1.png' %>'>
-      </a>
-      <div class="clearfix"></div>
-    </div>
-    <div class="pic-dindex-2">
-      <a href="/products" style="position:absolute;">
-        <img src='<%= image_url 'D2.png' %>'>
-      </a>
-    </div>
-    <div class="pic-dindex-3">
-      <!-- <a href="/" style="position:absolute;"> -->
-      <%= link_to dcarts_path do  %>
-        <img src='<%= image_url 'D3.png' %>'>
-      <% end %>
-      <!-- </a> -->
-    </div>
-  </div>
-</div>
-<!-- 分页导航 -->
-<nav class="navbar navbar-default" role="navigation">
-	<div class="container-fluid">
-  	<div>
-  		<ul class="nav navbar-nav">
-  			<li><a href="/dproducts?dcategory=肉">肉</a></li>
-  			<li><a href="/dproducts?dcategory=菜">菜</a></li>
-        <li><a href="/dproducts?dcategory=调料">调料</a></li>
-        <li><a href="/dproducts?dcategory=厨师">厨师</a></li>
-  		</ul>
-  	</div>
-	</div>
-</nav>
-<!-- dproduct 分类 -->
-<ul class="nav navbar-nav navbar-left">
-  <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-e panded="false">d分类<span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu">
-      <% Dcategory.all.each do |dcategory| %>
-        <li>
-          <%= link_to(dcategory.name, dproducts_path(dcategory: dcategory.name)) %>
-        </li>
-      <% end %>
-    </ul>
-  </li>
-</ul>
 
-<ul class="caselist">
-	<li>
-		<a href="#" class="tagImg1" target="_blank"><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fgbs2z79jkj306a06amxi.jpg" alt="站长素材" / ></a>
-		<div class="tagDiv1">
-			<a href="http://sc.chinaz.com" class="tagImg2" target="_blank"><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fgbs2z79jkj306a06amxi.jpg" alt="站长素材" /></a>
-			<h3>站长素材</h3>
-			<p class="tagP1">类型：标准网站</p>
-			<p class="tagP2">站长素材,为前端人员提供建站常用的JS特效代码,网页特效代码,在线客服代码,导航菜单,图片特效,jQuery特效代码等大多数资源</p>
-			<p class="tagP3"><a href="http://sc.chinaz.com" target="_blank">查看该产品</a><a href="http://sc.chinaz.com" target="_blank">查看案例</a></p>
-		</div>
-	</li>
-</ul>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#323031; border:none; border-radius:0;">
+	<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#example-navbar-collapse">
+			<span class="sr-only">切换导航</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" style="color:#fff;" href="/dproducts">黑暗料理</a>
+		<ul class="nav navbar-nav navbar-left">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-e panded="false" style="color:#fff; font-size:18px;">分类<span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<% Dcategory.all.each do |dcategory| %>
+						<li>
+							<%= link_to(dcategory.name, dproducts_path(dcategory: dcategory.name)) %>
+						</li>
+					<% end %>
+				</ul>
+			</li>
+		</ul>
+		<a class="navbar-brand" style="color:#fff;" href="/">品味实验室</a>
+		<a class="navbar-brand" style="color:#fff;" href="/party/index">大厨聚会</a>
+	</div>
+
+
+	<a class="navbar-brand" style="color:#fff;" href="/dcarts">后厨( <%= current_dcart.dproducts.count %> )</a>
+</nav>
+
+<div class="img-bg-dindex-1">
+</div>
 
 <ul class="caselist">
   <% @dproducts.each do |dproduct| %>
     <li>
-		  <a href="#" class="tagImg1" target="_blank"><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fgbs2z79jkj306a06amxi.jpg" alt="站长素材" / ></a>
+		  <a href="JavaScript:void(0)" class="tagImg1" target="_blank"><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fgbwf3qhjrj306a06a0t1.jpg"></a>
 			<div class="tagDiv1">
-				<a href="http://sc.chinaz.com" class="tagImg2" target="_blank">
+				<a href="JavaScript:void(0)" class="tagImg2" target="_blank">
 					<% if dproduct.image.present? %>
-						<%= image_tag(dproduct.image.thumb.url, class: "bg-dindex-1") %>
+						<%= image_tag(dproduct.image.thumb.url) %>
 					<% else %>
 						<%= image_tag("http://placehold.it/200x200&text=No Pic") %>
 					<% end %>
 				</a>
 				<p class="tagP3">
-					<a href="http://sc.chinaz.com"><%= dproduct.title %></a>
+					<a href="JavaScript:void(0)"><%= dproduct.title %></a>
 					<% if dproduct.quantity.present? && dproduct.quantity > 0 %>
 						<%= link_to(add_to_dcart_dproduct_path(dproduct), :method => :post) do %>
 							加入后厨
