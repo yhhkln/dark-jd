@@ -124,7 +124,7 @@ ActiveRecord::Schema.define(version: 20170606142657) do
     t.string   "city"
     t.string   "district"
     t.string   "address"
-    t.         "date"
+    t.date     "date"
     t.index ["aasm_state"], name: "index_orders_on_aasm_state"
   end
 
