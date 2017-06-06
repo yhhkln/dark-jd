@@ -6,7 +6,7 @@
 		<ul class="nav navbar-nav">
 			<li class="dropdown">
 					<a href="/products" class="dropdown-toggle" data-toggle="dropdown">
-							原材料 <b class="caret"></b>
+							分类 <b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="/products?category=肉">肉</a></li>
@@ -16,9 +16,9 @@
 						<li><a href="/products?category=厨">厨</a></li>
 					</ul>
 			</li>
-			<li><a href="/carts">实验室 ( <%= current_cart.products.count %> )</a></li>
-			<!-- <li><a href="/dproducts">黑暗料理</a></li> -->
+			<li><a href="/dproducts">黑暗料理</a></li>
 			<li><%= link_to("大厨聚会", party_index_path) %></li>
+			<li><a href="/carts">实验室 ( <%= current_cart.products.count %> )</a></li>
 			<!-- <li><%= link_to("大厨招聘", jobs_path) %></li> -->
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
