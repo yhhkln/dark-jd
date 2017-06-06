@@ -19,6 +19,7 @@
 			<li><a href="/carts">实验室 ( <%= current_cart.products.count %> )</a></li>
 			<!-- <li><a href="/dproducts">黑暗料理</a></li> -->
 			<li><%= link_to("大厨聚会", party_index_path) %></li>
+			<li><%= link_to("大厨招聘", jobs_path) %></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<% if !current_user %>
@@ -39,11 +40,15 @@
 								<%= link_to("Dadmin 选单", dadmin_dproducts_path ) %>
 							</li>
 							<li>
-								<%= link_to("d订单列表", account_dorders_path ) %>
+								<%= link_to("Jadmin 选单", admin_jobs_path ) %>
 							</li>
+
 						<% end %>
 						<li>
-							<%= link_to("我的订单", account_orders_path ) %>
+							<%= link_to("实验室订单", account_orders_path ) %>
+						</li>
+						<li>
+							<%= link_to("黑暗订单", account_dorders_path ) %>
 						</li>
 						<li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
 					</ul>

@@ -5,11 +5,23 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'party/index'
 
+  resources :jobs do
+    resources :resumes
+  end
+
   resources :comments
 
   devise_for :users, :controllers => { :registrations => "users/registrations", :sessions => "users/sessions" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do
+
+    resources :jobs do
+      member do
+        post :publish
+        post :hide
+      end
+    end
+    resources :resumes
     resources :categories
 
     resources :products do
