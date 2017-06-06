@@ -2,6 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//**大图部分**
+.img-bg-dindex-1 {
+  position: relative;
+  height: 1000px;
+  background-size: cover;                             //确保图片完全撑开
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(https://ws4.sinaimg.cn/large/006tNc79gy1fgbx05hzg9j31hc0u0auc.jpg);
+  img {
+    width: 240px;
+    height: 240px;
+  }
+}
+.pic-dindex-1 {
+  padding-left: 50px;
+  padding-top: 80px;
+}
+.pic-dindex-2 {
+  padding-left: 300px;
+  padding-top: 300px;
+}
+.pic-dindex-3 {
+  padding-left: 50px;
+  padding-top: 300px;
+}
+
+
+//===========** 产品部分 **==========
 @charset "utf-8";
 * {
 	margin:0;
@@ -20,8 +48,8 @@ body {
 	margin:30px auto;
 }
 .caselist li {
-	width:227px;
-	height:227px;
+	width:226px;
+	height:226px;
 	float:left;
 	margin:0 10px 15px 0;
 	position:relative;
