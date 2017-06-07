@@ -1,10 +1,18 @@
-<h3>投简历到<%= @job.title %></h3>
+<style>
 
-<hr>
+</style>
 
-<%= simple_form_for [@job, @resume] do |f| %>
-<%= f.input :content %>
-
-<%= f.input :attachment %>
-<%= f.submit "送出" %>
-<% end %>
+<div class="col-md-5 col-centered">
+  <div class="col-md-12 row-3">
+    <h3>
+      投简历到<%= @job.title %>
+    </h3>
+  </div>
+  <div class="col-md-12 row-3 input-style-1">
+    <%= simple_form_for [@job, @resume] do |f| %>
+      <%= f.input :content, :label => false, placeholder:'自我介绍', input_html: { class: 'input-style-3' } %>
+      <%= f.input :attachment, label: "上传简历"%>
+      <%= f.submit "发送" %>
+    <% end %>
+  </div>
+</div>

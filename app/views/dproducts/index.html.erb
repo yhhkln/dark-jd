@@ -17,41 +17,70 @@ $(function(){
 });
 </script>
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#323031; border:none; border-radius:0;">
+<nav class="navbar navbar-default navbar-fixed-top nav-style" role="navigation" style="background-color:#323031;">
 	<div class="container-fluid">
-	<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target="#example-navbar-collapse">
-			<span class="sr-only">切换导航</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<a class="navbar-brand" style="color:#fff;" href="/dproducts">黑暗料理</a>
-		<ul class="nav navbar-nav navbar-left">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/dproducts" style="color:#fff;">黑暗料理</a>
+    </div>
+		<ul class="nav navbar-nav">
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-e panded="false" style="color:#fff; font-size:18px;">分类<span class="caret"></span></a>
-				<ul class="dropdown-menu" role="menu">
-					<% Dcategory.all.each do |dcategory| %>
-						<li>
-							<%= link_to(dcategory.name, dproducts_path(dcategory: dcategory.name)) %>
-						</li>
-					<% end %>
-				</ul>
+					<a href="/dproducts" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">
+							分类 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="/dproducts?category=肉">肉</a></li>
+						<li><a href="/dproducts?category=菜">菜</a></li>
+						<li><a href="/dproducts?category=料">料</a></li>
+						<li class="divider"></li>
+						<li><a href="/dproducts?category=厨">厨</a></li>
+					</ul>
 			</li>
+			<li><a href="/" style="color:#fff;">品味食验室</a></li>
+			<li><a href="/party/index" style="color:#fff;">大厨聚会</a></li>
+			<li><a href="/jobs" style="color:#fff;">大厨招聘</a></li>
+			<li><a href="/dcarts" style="color:#fff;">实验室 ( <%= current_cart.products.count %> )</a></li>
 		</ul>
-		<a class="navbar-brand" style="color:#fff;" href="/">品味实验室</a>
-		<a class="navbar-brand" style="color:#fff;" href="/party/index">大厨聚会</a>
+		<ul class="nav navbar-nav navbar-right">
+			<% if !current_user %>
+				<li><%= link_to("注册", new_user_registration_path, style:"color:#fff;") %></li>
+				<li><%= link_to("登录", new_user_session_path, style:"color:#fff;") %></li>
+			<% else %>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">
+						Hi!, <%= current_user.email %>
+						<b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<% if current_user.admin? %>
+							<li>
+								<%= link_to("Admin 选单", admin_products_path ) %>
+							</li>
+							<li>
+								<%= link_to("Dadmin 选单", dadmin_dproducts_path ) %>
+							</li>
+							<li>
+								<%= link_to("Jadmin 选单", admin_jobs_path ) %>
+							</li>
+
+						<% end %>
+						<li>
+							<%= link_to("实验室订单", account_orders_path ) %>
+						</li>
+						<li>
+							<%= link_to("黑暗订单", account_dorders_path ) %>
+						</li>
+						<li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
+					</ul>
+				</div>
+			<% end %>
+		</ul>
 	</div>
-
-
-	<a class="navbar-brand" style="color:#fff;" href="/dcarts">后厨( <%= current_dcart.dproducts.count %> )</a>
 </nav>
 
 <div class="img-bg-dindex-1">
 </div>
 
-<ul class="caselist">
+<ul class="caselist" style="margin-top:80px;">
   <% @dproducts.each do |dproduct| %>
     <li>
 		  <a href="JavaScript:void(0)" class="tagImg1" target="_blank"><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fgbwf3qhjrj306a06a0t1.jpg"></a>
