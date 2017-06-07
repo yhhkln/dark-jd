@@ -1,50 +1,88 @@
-<div class="dropdown clearfix pull-right">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    排序
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-    <li>
-      <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
-    </li>
-    <li>
-      <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
-    </li>
-    <li>
-      <%= link_to("按照表时间排序", jobs_path) %>
-    </li>
-  </ul>
+<div class="text-center" style="margin-top:17%; margin-bottom:17%; letter-spacing:10px; color: #323031">
+  <h1 style="margin-bottom:100px;">诚邀米其林星级厨师入驻本实验室</h1>
+  <h3>如果你厌倦了流水线式的菜品</h3>
+  <h3>想突破传统挑战界限 创造传奇</h3>
+  <h3 style="margin-bottom:100px;">快联系我们吧 我们正需要你</h3>
+
 </div>
 
 
-<table class="table table-boldered">
-    <thead>
-        <tr>
-            <td>
-                职缺</td>
-            <td>薪资下限</td>
-            <td>薪资上限</td>
-            <td>刊登时间</td>
-        </tr>
+<div class="text-center" style="margin-bottom:80px; letter-spacing:10px; color: #323031">
+  <h1>已有以下厨师常驻实验室</h1>
+</div>
 
-    </thead>
-    <tbody>
-        <% @jobs.each do |job| %>
-        <tr>
-            <td>
-                <%= link_to(job.title, job_path(job)) %>
-            </td>
-            <td>
-                <%= job.wage_lower_bound %>
-            </td>
-            <td>
-                <%= job.wage_upper_bound %>
-            </td>
-            <td>
-                <%= job.created_at %>
-            </td>
-        </tr>
-        <% end %>
-    </tbody>
+<div class="row" style="margin-top:20px;">
+  <div class="col-md-8 col-centered">
+    <div class="col-md-3">
+      <img src="https://ws3.sinaimg.cn/large/006tNc79gy1fgcsegbnupj308c08ctaa.jpg" class="img-circle" style="max-width:200px;">
+    </div>
+    <div class="col-md-3">
+      <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fgcseo6u6jj308c08c75k.jpg" class="img-circle" style="max-width:200px;">
+    </div>
+    <div class="col-md-3">
+      <img src="https://ws2.sinaimg.cn/large/006tNc79gy1fgcsepqohej308c08cwg3.jpg" class="img-circle" style="max-width:200px;">
+    </div>
+    <div class="col-md-3">
+      <img src="https://ws1.sinaimg.cn/large/006tNc79gy1fgcser6zwxj308c08c0ud.jpg" class="img-circle" style="max-width:200px;">
+    </div>
+  </div>
+</div>
 
-</table>
+<div class="row" style="margin:50px 0px;">
+  <div class="col-md-9 col-centered" style="height:1px; background-color:#000;"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-5 col-centered">
+    <div class="dropdown clearfix pull-right" style="margin-bottom:30px;">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        排序
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+        <li>
+          <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
+        </li>
+        <li>
+          <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
+        </li>
+        <li>
+          <%= link_to("按照表时间排序", jobs_path) %>
+        </li>
+      </ul>
+    </div>
+
+    <table class="table table-boldered table-striped table-hover text-center">
+      <thead>
+          <tr>
+            <td><h3>招聘职位</h3></td>
+            <td><h3>薪资下限</h3></td>
+            <td><h3>薪资上限</h3></td>
+            <td><h3>刊登时间</h3></td>
+            <td><h3>提交简历</h3></td>
+          </tr>
+      </thead>
+      <tbody>
+          <% @jobs.each do |job| %>
+          <tr>
+              <td>
+                <h4><%= job.title %></h4>
+              </td>
+              <td>
+                  <h4><%= job.wage_lower_bound %></h4>
+              </td>
+              <td>
+                  <h4><%= job.wage_upper_bound %></h4>
+              </td>
+              <td>
+                  <h4><%= job.created_at.strftime("%Y-%m-%d") %></h4>
+              </td>
+              <td>
+                  <%= link_to("提交简历", new_job_resume_path(job), class:"btn btn-default") %>
+              </td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
