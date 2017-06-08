@@ -19,6 +19,7 @@ class Product < ApplicationRecord
 
   mount_uploader :image, ImageUploader
   acts_as_list
+  scope :random5, ->{ order("RANDOM()").limit(5) }
 
   has_many :comments
 end
