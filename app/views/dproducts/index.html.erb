@@ -35,9 +35,9 @@ $(function(){
 								分类 <b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="/dproducts?category=肉">肉</a></li>
-							<li><a href="/dproducts?category=菜">菜</a></li>
-							<li><a href="/dproducts?category=料">料</a></li>
+							<li><a href="/dproducts?dcategory=肉">肉</a></li>
+							<li><a href="/dproducts?dcategory=菜">菜</a></li>
+							<li><a href="/dproducts?dcategory=料">料</a></li>
 							<li class="divider"></li>
 							<li><a href="/dproducts?category=厨">厨</a></li>
 						</ul>
@@ -45,7 +45,7 @@ $(function(){
 				<li><a href="/">品味食验室</a></li>
 				<li><a href="/party/index">大厨聚会</a></li>
 				<li><a href="/jobs">大厨招聘</a></li>
-				<li><a href="/dcarts">实验室 ( <%= current_cart.products.count %> )</a></li>
+				<li><a href="/dcarts">后厨 ( <%= current_cart.products.count %> )</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
