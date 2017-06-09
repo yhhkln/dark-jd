@@ -49,10 +49,11 @@ Rails.application.routes.draw do
 
     collection do
       get :search
+      post :lucky_cart3
+      post :lucky_cart4
       post :lucky_cart5
       post :lucky_cart6
       post :lucky_cart7
-      post :lucky_cart8
 
     end
 
