@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'party/index'
+  get 'question/index'
+
+
 
   resources :jobs do
     resources :resumes
