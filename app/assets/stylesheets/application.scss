@@ -31,6 +31,7 @@ html {
    min-height: 100%;
  }
 body {
+  overflow-x: hidden;
   margin-top:100px; margin-bottom:150px;
   color: #666;
   font-size: 1.2em;
@@ -77,7 +78,7 @@ body {
 }
 .nav-welcome {
   border: 0;
-  background-color: rgba(245,245,245,0.8)
+  background-color: rgba(245,245,245,1)
   ;
 }
 .nav-welcome .navbar-nav > li > a {
@@ -86,16 +87,25 @@ body {
 .nav-welcome .navbar-header > a {
     color: #666666;
 }
+.nav-welcome .navbar-nav > li {
+  margin-left: -10px;
+}
 .nav-dproduct {
   border: 0;
-  background-color: rgba(50, 48, 49,0.8)
+  background-color: rgba(50, 48, 49,1)
   ;
 }
 .nav-dproduct .navbar-nav > li > a {
     color: #F9F9F9;
 }
+.nav-dproduct .navbar-nav > li > a:hover {
+    color: #D81315;
+}
 .nav-dproduct .navbar-header > a {
     color: #F9F9F9;
+}
+.nav-dproduct .navbar-header > a:hover {
+    color: #D81315;
 }
 
 //=========== Footer ===========//
@@ -103,11 +113,13 @@ body {
   position: absolute;
   z-index: -1;
   bottom: 0;
-  width: 100%;
+  width: 101%;
   background-image: url(http://teahouse.themerex.net/wp-content/uploads/2016/11/footer_bg.jpg?id=651);
   padding: 220px 0px;
   color: #fff;
   font-size: 1.2em;
+  margin-bottom: 0px;
+  border-radius: none;
 }
 
 
@@ -144,7 +156,7 @@ body {
 .i-windex-1 {
   font-size:40px;
   float:right;
-  color: #9a9292;
+  color: #fff;
 }
 .font-openbox {
   line-height:40px;

@@ -18,11 +18,11 @@
             <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"") %>
           <% end %>
         <% end %>
-        <div class="pull-right" style="margin-bottom:50px; margin-right:8px;">
-          <span class="font-pindex-1"><%= product.title %></span>
+        <div class="" style="margin-bottom:60px; margin-top:10px;">
+          <h4><%= product.title %></h4>
           <span class="">
             <% if product.quantity.present? && product.quantity > 0 %>
-              <%= link_to("加入实验室", add_to_cart_product_path(product), :method => :post, class:"btn btn-default") %>
+              <%= link_to("加入实验室", add_to_cart_product_path(product), :method => :post, class:"btn btn-default btn-sm") %>
             <% else %>
               正在积极备货中......
             <% end %>
