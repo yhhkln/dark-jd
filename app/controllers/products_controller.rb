@@ -59,7 +59,8 @@ class ProductsController < ApplicationController
     redirect_to :back
   end
 
-  def lucky_cart
+  def lucky_cart5
+    current_cart.clean!
     @products = Product.random5
     @products.each do |product|
       current_cart.add_product_to_cart(product)
@@ -67,6 +68,32 @@ class ProductsController < ApplicationController
     redirect_to carts_path, notice:"霖霖赞你好手气~"
   end
 
+  def lucky_cart6
+    current_cart.clean!
+    @products = Product.random6
+    @products.each do |product|
+      current_cart.add_product_to_cart(product)
+    end
+    redirect_to carts_path, notice:"霖霖赞你好手气~"
+  end
+
+  def lucky_cart7
+    current_cart.clean!
+    @products = Product.random7
+    @products.each do |product|
+      current_cart.add_product_to_cart(product)
+    end
+    redirect_to carts_path, notice:"霖霖赞你好手气~"
+  end
+  
+  def lucky_cart8
+    current_cart.clean!
+    @products = Product.random8
+    @products.each do |product|
+      current_cart.add_product_to_cart(product)
+    end
+    redirect_to carts_path, notice:"霖霖赞你好手气~"
+  end
 
 # 搜索
   def search

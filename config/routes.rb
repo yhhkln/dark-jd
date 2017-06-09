@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'party/index'
   get 'question/index'
+  get 'random/index'
 
 
 
@@ -48,7 +49,11 @@ Rails.application.routes.draw do
 
     collection do
       get :search
-      post :lucky_cart
+      post :lucky_cart5
+      post :lucky_cart6
+      post :lucky_cart7
+      post :lucky_cart8
+
     end
 
     member do
