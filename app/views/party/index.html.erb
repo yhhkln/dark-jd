@@ -25,19 +25,21 @@ body {
 	font-size:4.53em;
 	transition: 0.5s;
 }
-.nav-dpro1 {
-	background-color: #fff;
-	border: none;
-	color: #185630;
-	font-size: 1.2em;
-}
-.nav-dpro1 .navbar-nav>li>a {
-  color: #185630;
-}
 .carousel-inner > .item {
   -webkit-transition: -webkit-transform 1s ease-in-out;
   -o-transition: -o-transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
+}
+.nav-party {
+  border: 0;
+  background-color: rgba(245,245,245,0.8)
+  ;
+}
+.nav-party .navbar-nav > li > a {
+    color: #666666;
+}
+.nav-party .navbar-header > a {
+    color: #666666;
 }
 </style>
 </head>
@@ -47,16 +49,25 @@ body {
 	<a href="#"><p class="font-drpo1">大厨聚会</p></a>
 </div>
 
-<nav class="navbar navbar-default navbar-fixed-top nav-style" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top nav-party" role="navigation">
 	<div class="container-fluid">
     <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#example-navbar-collapse">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
       <a class="navbar-brand" href="/party/index">大厨聚会</a>
     </div>
-		<ul class="nav navbar-nav">
-			<li><a href="/">品味食验室</a></li>
-			<li><a href="/dproducts">黑暗料理</a></li>
-			<li><%= link_to("大厨招聘", jobs_path) %></li>
-		</ul>
+		<div class="collapse navbar-collapse" id="example-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/">品味食验室</a></li>
+				<li><a href="/dproducts">黑暗料理</a></li>
+				<li><%= link_to("大厨招聘", jobs_path) %></li>
+			</ul>
+		</div>
 	</div>
 </nav>
 
