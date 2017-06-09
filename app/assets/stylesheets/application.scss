@@ -87,6 +87,9 @@ body {
 .nav-welcome .navbar-header > a {
     color: #666666;
 }
+.nav-welcome .navbar-nav > li {
+  margin-left: -8px;
+}
 .nav-dproduct {
   border: 0;
   background-color: rgba(50, 48, 49,1)
@@ -115,6 +118,8 @@ body {
   padding: 220px 0px;
   color: #fff;
   font-size: 1.2em;
+  margin-bottom: 0px;
+  border-radius: none;
 }
 
 
@@ -164,7 +169,7 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  margin-top: -45px;
+  margin-top: -50px;
   span a {
     color: #333333;
   }
