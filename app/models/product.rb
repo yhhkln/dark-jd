@@ -19,9 +19,11 @@ class Product < ApplicationRecord
 
   mount_uploader :image, ImageUploader
   acts_as_list
-  scope :random5, ->{ order("RANDOM()").limit(5) }
-  scope :random6, ->{ order("RANDOM()").limit(6) }
-  scope :random7, ->{ order("RANDOM()").limit(7) }
-  scope :random8, ->{ order("RANDOM()").limit(8) }
+  scope :random3, ->{ order("RANDOM()").limit(rand(3..5)) }
+  scope :random4, ->{ order("RANDOM()").limit(rand(4..6)) }
+  scope :random5, ->{ order("RANDOM()").limit(rand(5..7)) }
+  scope :random6, ->{ order("RANDOM()").limit(rand(6..8)) }
+  scope :random7, ->{ order("RANDOM()").limit(rand(7..9)) }
+
   has_many :comments
 end
