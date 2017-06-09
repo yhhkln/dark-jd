@@ -70,7 +70,7 @@ body {
 }
 
 //=========== Navbar ============//
-.nav-style {
+.nav-welcome {
   border: 0;
   background-color: rgba(245,245,245,0.8)
   ;
@@ -80,10 +80,10 @@ body {
   margin-top: -15px;
   margin-right: 20px;
 }
-.navbar-default .navbar-nav > li > a {
+.nav-welcome .navbar-nav > li > a {
     color: #666666;
 }
-.navbar-default .navbar-header > a {
+.nav-welcome .navbar-header > a {
     color: #666666;
 }
 
