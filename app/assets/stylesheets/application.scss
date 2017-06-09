@@ -62,7 +62,7 @@ body {
   h1:hover,
   h2:hover,
   h3:hover{
-    opacity: 0.8;
+    opacity: 0.9;
   }
   .btn-default {
     color: #666;
@@ -72,13 +72,19 @@ body {
 //=========== Navbar ============//
 .nav-style {
   border: 0;
-  background-color: rgba(245,245,245,0.9)
+  background-color: rgba(245,245,245,0.8)
   ;
 }
 .input-group {//搜索
   width:200px;
   margin-top: -15px;
   margin-right: 20px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #666666;
+}
+.navbar-default .navbar-header > a {
+    color: #666666;
 }
 
 //=========== Footer ===========//
@@ -112,16 +118,17 @@ body {
 .white_content {
     display: none;
     position: absolute;
-    top: 8%;
+    top: 4%;
     left: 18%;
     width: 65%;
-    height: 30%;
+    height: 16%;
     padding: 20px;
     border: 15px solid #fff;
     border-radius: 5px;
-    background: rgba(245,245,245,1);
+    background: rgba(255, 182, 0,1);
     z-index:1002;
     overflow: auto;
+    color:#fff;
 }
 .i-windex-1 {
   font-size:40px;
@@ -139,15 +146,36 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  margin-top: -45px;
-  .posi-windex1 {
-    padding-top: 10%;
-    padding-left: 10%;
-  }
+  margin-top: -50px;
   span a {
     color: #333333;
   }
 }
+@media screen and (min-width: 1201px) {
+  .posi-windex1 {
+    padding-top: 9%;
+    padding-left: 15%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .posi-windex1 {
+    padding-top: 15%;
+    padding-left: 10%;
+  }
+}
+@media screen and (max-width: 970px) {
+  .posi-windex1 {
+    padding-top: 20%;
+    padding-left: 10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .posi-windex1 {
+    padding-top: 35%;
+    padding-left: 10%;
+  }
+}
+
 .row-windex2 {
   margin-top: 80px;
   img:hover {
