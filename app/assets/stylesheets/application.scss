@@ -70,21 +70,32 @@ body {
 }
 
 //=========== Navbar ============//
-.nav-welcome {
-  border: 0;
-  background-color: rgba(245,245,245,0.8)
-  ;
-}
 .input-group {//搜索
   width:200px;
   margin-top: -15px;
   margin-right: 20px;
+}
+.nav-welcome {
+  border: 0;
+  background-color: rgba(245,245,245,0.8)
+  ;
 }
 .nav-welcome .navbar-nav > li > a {
     color: #666666;
 }
 .nav-welcome .navbar-header > a {
     color: #666666;
+}
+.nav-dproduct {
+  border: 0;
+  background-color: rgba(50, 48, 49,0.8)
+  ;
+}
+.nav-dproduct .navbar-nav > li > a {
+    color: #F9F9F9;
+}
+.nav-dproduct .navbar-header > a {
+    color: #F9F9F9;
 }
 
 //=========== Footer ===========//
