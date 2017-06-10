@@ -1,5 +1,103 @@
-<li><%= link_to("lucky3~5", lucky_cart3_products_path, method: :post) %></li>
+<style media="screen">
+/*html {
+	overflow: hidden;
+}*/
+body {
+	width: 100%;
+	height: 100%;
+	cursor: crosshair;
+}
+.spanSlide {
+	position: absolute;
+	background: #000;
+	font-size: 1px;
+	overflow: hidden;
+}
+.imgSlide {
+	position: absolute;
+	left: 5%;
+	top: 5%;
+	width: 90%;
+	height: 90%;
+	overflow: hidden;
+}
+.txtSlide {
+	position: absolute;
+	top: 10%;
+	left: 50px;
+	width:100%;
+	color:#D81315;
+	font-weight: bold;
+	font-size:25px;
+	letter-spacing:12px;
+	filter: alpha(opacity=70);
+	-moz-opacity:0.7;
+	opacity:0.7;
+}
+#btn-ran1 {
+	padding: 35px 20px;
+	font-size:30px;
+	color: #fff;
+}
+.posi-random {
+	position:absolute;
+	left:50%;
+	top:400px;
+}
+.row-ran1 {
+	height: 620px;
+}
+</style>
+
+<div class="row row-ran1">
+	<div class="posi-random">
+		<div style="position:absolute;width:720px;height:560px;left:-360px;top:-280px;background:#fff"></div>
+		<div style="position:absolute;left:-40px;top:-6px;color:#000;font-family:arial;font-size:0.9em">Loading...</div>
+		<div id="screen" style="position:absolute;width:640px;height:480px;left:-320px;top:-240px;overflow:hidden"></div>
+	</div>
+
+	<div id="images" style="visibility:hidden">
+		<img title="品味食验室" src="http://ww2.sinaimg.cn/large/006tNc79gy1fg0frtm0taj31bw0ice0e.jpg">
+		<img title="黑暗料理" src="https://ws4.sinaimg.cn/large/006tNc79gy1fgbx05hzg9j31hc0u0auc.jpg">
+		<img title="大厨聚会" src="https://ws2.sinaimg.cn/large/006tNc79gy1fg3q1j3od4j30zk0k0noz.jpg">
+		<img title="大厨招聘" src="https://ws4.sinaimg.cn/large/006tNbRwgy1fgg320qhplj30rs0ghwl1.jpg">
+		<img title="lucky" src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgdx4cbl3pj30dw0afwev.jpg">
+	</div>
+</div>
+
+<div class="text-center">
+	<h2 style="margin-bottom:50px; margin-top:-20px;">点击按钮，随机几样原材料加入购物车</h2>
+</div>
+
+<div class="row" style="margin-top:0px;">
+	<div class="col-md-12 col-centered ">
+		<div class="col-md-3 col-md-offset-3 btn-ran1">
+			<%= link_to("lucky 3~5", lucky_cart3_products_path, method: :post, class:"btn btn-default btn-block btn-primary", id:"btn-ran1") %>
+		</div>
+		<div class="col-md-3 btn-ran1">
+			<%= link_to("lucky 4~6", lucky_cart4_products_path, method: :post, class:"btn btn-default btn-block btn-success", id:"btn-ran1") %>
+		</div>
+	</div>
+</div>
+<div class="row" style="margin-top:20px;">
+	<div class="col-md-12 col-centered ">
+		<div class="col-md-3 col-md-offset-3 btn-ran1">
+			<%= link_to("lucky 5~7", lucky_cart5_products_path, method: :post, class:"btn btn-default btn-block btn-info", id:"btn-ran1") %>
+		</div>
+		<div class="col-md-3 btn-ran1">
+			<%= link_to("lucky 6~8", lucky_cart6_products_path, method: :post, class:"btn btn-default btn-block btn-warning", id:"btn-ran1") %>
+		</div>
+	</div>
+</div>
+<div class="row" style="margin-top:20px;">
+	<div class="col-md-3 col-centered btn-ran1">
+		<%= link_to("lucky 7~9", lucky_cart7_products_path, method: :post, class:"btn btn-default btn-block btn-danger", id:"btn-ran1") %>
+	</div>
+</div>
+
+
+<!-- <li><%= link_to("lucky3~5", lucky_cart3_products_path, method: :post, class:"btn btn-default btn-block") %></li>
 <li><%= link_to("lucky4~6", lucky_cart4_products_path, method: :post) %></li>
 <li><%= link_to("lucky5~7", lucky_cart5_products_path, method: :post) %></li>
 <li><%= link_to("lucky6~8", lucky_cart6_products_path, method: :post) %></li>
-<li><%= link_to("lucky7~9", lucky_cart7_products_path, method: :post) %></li>
+<li><%= link_to("lucky7~9", lucky_cart7_products_path, method: :post) %></li> -->
