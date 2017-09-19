@@ -31,159 +31,159 @@ price: rand(25..30),
 quantity: 50,
  )
 puts "21"
-Product.create!(title: "猪腿弧肉500g",
-price: rand(25..30),
-quantity: 50,
- )
-puts "22"
-Product.create!(title: "猪小里脊500g",
-price: rand(25..30),
-quantity: 50,
- )
-puts "23"
-Product.create!(title: "颈前排段500g",
-price: rand(25..30),
-quantity: 50,
- )
-puts "24"
-Product.create!(title: "肉馅500g",
-price: rand(25..30),
-quantity: 50,
- )
-puts "25"
-Product.create!(title: "猪寸骨500g",
-price: rand(25..30),
-quantity: 50,
- )
-puts "26"
-Product.create!(title: "猪肋排500g",
-price: rand(25..30),
-quantity: 50,
- )
-puts "27"
-Product.create!(title: "肉青500g",
-price: rand(25..30),
-quantity: 50,
- )
-puts "28"
-Product.create!(title: "菜心",
-price: rand(10..15),
-quantity: 50,
-)
-puts "31"
-Product.create!(title: "菜心",
-price: rand(10..15),
-quantity: 50,
-)
-puts "32"
-Product.create!(title: "皇宫菜",
-price: rand(10..15),
-quantity: 50,
-)
-puts "33"
-Product.create!(title: "芥蓝",
-price: rand(10..15),
-quantity: 50,
-)
-puts "34"
-Product.create!(title: "空心菜",
-price: rand(10..15),
-quantity: 50,
-)
-puts "35"
-Product.create!(title: "青江菜",
-price: rand(10..15),
-quantity: 50,
-)
-puts "36"
-Product.create!(title: "意大利生菜",
-price: rand(10..15),
-quantity: 50,
-)
-puts "37"
-Product.create!(title: "圆椒",
-price: rand(10..15),
-quantity: 50,
-)
-puts "38"
-Product.create!(title: "盐",
-price: 1,
-quantity: 50,
-)
-puts "41"
-Product.create!(title: "胡椒粉",
-price: 1,
-quantity: 50,
-)
-puts "42"
-Product.create!(title: "孜然",
-price: 1,
-quantity: 50,
-)
-puts "43"
-Product.create!(title: "肉桂",
-price: 1,
-quantity: 50,
-)
-puts "44"
-Product.create!(title: "辣椒粉",
-price: 1,
-quantity: 50,
-)
-puts "45"
-Product.create!(title: "黑胡椒",
-price: 1,
-quantity: 50,
-)
-puts "46"
-Product.create!(title: "混合香料1",
-price: 1,
-quantity: 50,
-)
-puts "47"
-Product.create!(title: "混合香料2",
-price: 1,
-quantity: 50,
-)
-puts "48"
-Product.create!(title: "三星主厨",
-price: 499,
-quantity: 50,
-# category_id: 1,
-)
-puts "11"
-Product.create!(title: "两星主厨",
-price: rand(90..100)*10,
-quantity: 50,
-)
-puts "12"
-Product.create!(title: "两星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "13"
-Product.create!(title: "两星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "14"
-Product.create!(title: "两星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "15"
-Product.create!(title: "一星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "16"
-Product.create!(title: "一星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "17"
-Product.create!(title: "一星主厨",
-price: rand(90..100)*10,
-quantity: 50,
- )
-puts "18"
+# Product.create!(title: "猪腿弧肉500g",
+# price: rand(25..30),
+# quantity: 50,
+#  )
+# puts "22"
+# Product.create!(title: "猪小里脊500g",
+# price: rand(25..30),
+# quantity: 50,
+#  )
+# puts "23"
+# Product.create!(title: "颈前排段500g",
+# price: rand(25..30),
+# quantity: 50,
+#  )
+# puts "24"
+# Product.create!(title: "肉馅500g",
+# price: rand(25..30),
+# quantity: 50,
+#  )
+# puts "25"
+# Product.create!(title: "猪寸骨500g",
+# price: rand(25..30),
+# quantity: 50,
+#  )
+# puts "26"
+# Product.create!(title: "猪肋排500g",
+# price: rand(25..30),
+# quantity: 50,
+#  )
+# puts "27"
+# Product.create!(title: "肉青500g",
+# price: rand(25..30),
+# quantity: 50,
+#  )
+# puts "28"
+# Product.create!(title: "菜心",
+# price: rand(10..15),
+# quantity: 50,
+# )
+# puts "31"
+# Product.create!(title: "菜心",
+# price: rand(10..15),
+# quantity: 50,
+# )
+# puts "32"
+# Product.create!(title: "皇宫菜",
+# price: rand(10..15),
+# quantity: 50,
+# )
+# puts "33"
+# Product.create!(title: "芥蓝",
+# price: rand(10..15),
+# quantity: 50,
+# )
+# puts "34"
+# Product.create!(title: "空心菜",
+# price: rand(10..15),
+# quantity: 50,
+# )
+# puts "35"
+# Product.create!(title: "青江菜",
+# price: rand(10..15),
+# quantity: 50,
+# )
+# puts "36"
+# Product.create!(title: "意大利生菜",
+# price: rand(10..15),
+# quantity: 50,
+# )
+# puts "37"
+# Product.create!(title: "圆椒",
+# price: rand(10..15),
+# quantity: 50,
+# )
+# puts "38"
+# Product.create!(title: "盐",
+# price: 1,
+# quantity: 50,
+# )
+# puts "41"
+# Product.create!(title: "胡椒粉",
+# price: 1,
+# quantity: 50,
+# )
+# puts "42"
+# Product.create!(title: "孜然",
+# price: 1,
+# quantity: 50,
+# )
+# puts "43"
+# Product.create!(title: "肉桂",
+# price: 1,
+# quantity: 50,
+# )
+# puts "44"
+# Product.create!(title: "辣椒粉",
+# price: 1,
+# quantity: 50,
+# )
+# puts "45"
+# Product.create!(title: "黑胡椒",
+# price: 1,
+# quantity: 50,
+# )
+# puts "46"
+# Product.create!(title: "混合香料1",
+# price: 1,
+# quantity: 50,
+# )
+# puts "47"
+# Product.create!(title: "混合香料2",
+# price: 1,
+# quantity: 50,
+# )
+# puts "48"
+# Product.create!(title: "三星主厨",
+# price: 499,
+# quantity: 50,
+# # category_id: 1,
+# )
+# puts "11"
+# Product.create!(title: "两星主厨",
+# price: rand(90..100)*10,
+# quantity: 50,
+# )
+# puts "12"
+# Product.create!(title: "两星主厨",
+# price: rand(90..100)*10,
+# quantity: 50,
+#  )
+# puts "13"
+# Product.create!(title: "两星主厨",
+# price: rand(90..100)*10,
+# quantity: 50,
+#  )
+# puts "14"
+# Product.create!(title: "两星主厨",
+# price: rand(90..100)*10,
+# quantity: 50,
+#  )
+# puts "15"
+# Product.create!(title: "一星主厨",
+# price: rand(90..100)*10,
+# quantity: 50,
+#  )
+# puts "16"
+# Product.create!(title: "一星主厨",
+# price: rand(90..100)*10,
+# quantity: 50,
+#  )
+# puts "17"
+# Product.create!(title: "一星主厨",
+# price: rand(90..100)*10,
+# quantity: 50,
+#  )
+# puts "18"
