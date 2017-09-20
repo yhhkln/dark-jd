@@ -56,6 +56,8 @@
 						</a>
 						<ul class="dropdown-menu">
 							<% if current_user.admin? %>
+								<li><%= link_to "中文版", :controller => controller_name, :action => action_name, :locale => "zh-CN" %></li>
+								<li><%= link_to "English", :controller => controller_name, :action => action_name, :locale => "en" %></li>
 								<li>
 									<%= link_to("Admin 选单", admin_products_path ) %>
 								</li>
