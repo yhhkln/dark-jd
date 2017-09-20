@@ -32,11 +32,11 @@
           <%= @product.description %>
         </p>
         <div class="bg-grey">
-          <span class="pr1">售价</span>
+          <span class="pr1"><%= t("price")%></span>
           <span class="pr2">￥ <%= @product.price %> </span>
         </div>
         <div class="pr3">
-          库存 : <%= @product.quantity %>
+          <%= t("number")%> : <%= @product.quantity %>
         </div>
         <div class="pull-left">
           <% if @product.quantity.present? && @product.quantity > 0 %>
