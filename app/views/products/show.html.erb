@@ -29,7 +29,9 @@
       <div class="col-md-7 col-sm-7 col-xs-7">
         <h2> <%= @product.title %> </h2>
         <p class="pr1">
-          <%= @product.description %>
+          <%= @product.description %><br>
+          <%= @product.created_at.strftime("%Y/%m/%d %I:%M %p") %>
+
         </p>
         <div class="bg-grey">
           <span class="pr1"><%= t("price")%></span>
